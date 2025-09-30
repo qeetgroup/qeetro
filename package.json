@@ -1,0 +1,29 @@
+{
+  "name": "@qeetro/source",
+  "version": "0.0.0",
+  "description": "Modern project management platform with boards, tasks, and team collaboration.",
+  "keywords": [
+    "qeetro"
+  ],
+  "homepage": "https://github.com/qeetgroup/qeetro#readme",
+  "bugs": {
+    "url": "https://github.com/qeetgroup/qeetro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qeetgroup/qeetro.git"
+  },
+  "license": "MIT",
+  "author": "Qeet Group",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "generate:tree": "struct -o project.tree"
+  },
+  "dependencies": {
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@structure-codes/cli": "^0.0.6"
+  }
+}
