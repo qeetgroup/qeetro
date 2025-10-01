@@ -12,7 +12,8 @@
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "@qeetro/types": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.20.6"

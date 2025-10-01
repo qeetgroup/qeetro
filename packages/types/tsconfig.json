@@ -5,11 +5,9 @@
     "outDir": "dist",
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
     "composite": true,
-    "paths": {
-      "@qeetro/types": ["../../packages/types/src"]
-    }
+    "declaration": true,
+    "declarationMap": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"],
-  "references": [{ "path": "../../packages/types" }]
+  "exclude": ["node_modules", "dist"]
 }
