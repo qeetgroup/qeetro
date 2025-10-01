@@ -18,12 +18,15 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "generate:tree": "struct -o project.tree"
+    "generate:tree": "struct -o project.tree",
+    "prettier:check": "prettier --check .",
+    "prettier:format": "prettier --write ."
   },
   "dependencies": {
     "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "@structure-codes/cli": "^0.0.6"
+    "@structure-codes/cli": "^0.0.6",
+    "prettier": "^3.6.2"
   }
 }
