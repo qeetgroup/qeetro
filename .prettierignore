@@ -1,0 +1,11 @@
+node_modules
+pnpm-lock.yaml
+.pnpm-store
+coverage
+dist
+build
+.vite
+.eslintcache
+*.log
+**/tsconfig*.json
+**/package.json
