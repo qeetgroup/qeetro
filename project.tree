@@ -1,7 +1,43 @@
+├── .github
+│  └── workflows
+│    └── ci.yml
 ├── .gitignore
+├── .husky
+│  ├── _
+│  │  ├── .gitignore
+│  │  ├── applypatch-msg
+│  │  ├── commit-msg
+│  │  ├── h
+│  │  ├── husky.sh
+│  │  ├── post-applypatch
+│  │  ├── post-checkout
+│  │  ├── post-commit
+│  │  ├── post-merge
+│  │  ├── post-rewrite
+│  │  ├── pre-applypatch
+│  │  ├── pre-auto-gc
+│  │  ├── pre-commit
+│  │  ├── pre-merge-commit
+│  │  ├── pre-push
+│  │  ├── pre-rebase
+│  │  └── prepare-commit-msg
+│  └── pre-commit
+├── .prettierignore
+├── .prettierrc
 ├── apps
 │  ├── backend
+│  │  ├── .env
+│  │  ├── dist
+│  │  │  ├── index.d.ts
+│  │  │  ├── index.d.ts.map
+│  │  │  ├── index.js
+│  │  │  └── index.js.map
+│  │  ├── package.json
+│  │  ├── src
+│  │  │  └── index.ts
+│  │  └── tsconfig.json
 │  └── frontend
+│    ├── .env
 │    ├── .gitignore
 │    ├── eslint.config.js
 │    ├── index.html
@@ -20,9 +56,26 @@
 │    ├── tsconfig.json
 │    ├── tsconfig.node.json
 │    └── vite.config.ts
+├── eslint.config.js
 ├── LICENSE
 ├── package.json
 ├── packages
+│  ├── .gitkeep
+│  └── types
+│    ├── dist
+│    │  ├── index.d.ts
+│    │  ├── index.d.ts.map
+│    │  ├── index.js
+│    │  ├── index.js.map
+│    │  ├── User.d.ts
+│    │  ├── User.d.ts.map
+│    │  ├── User.js
+│    │  └── User.js.map
+│    ├── package.json
+│    ├── src
+│    │  ├── index.ts
+│    │  └── User.ts
+│    └── tsconfig.json
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
 ├── project.tree
