@@ -12,9 +12,15 @@ importers:
         specifier: ^5.9.2
         version: 5.9.2
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.36.0
+        version: 9.36.0
       '@structure-codes/cli':
         specifier: ^0.0.6
         version: 0.0.6
+      eslint:
+        specifier: ^9.36.0
+        version: 9.36.0
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
