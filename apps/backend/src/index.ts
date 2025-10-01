@@ -1,11 +1,15 @@
-import { User } from '@qeetro/types';
+import express, { Express, Request, Response } from 'express';
 
-const user: User = {
-  id: '1',
-  name: 'John Doe',
-  email: 'john.doe@example.com',
-  createdAt: new Date().toISOString(),
-  updatedAt: new Date().toISOString(),
-};
+const app: Express = express();
 
-console.log(user);
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get('/health', (_: Request, res: Response) => {
+  res.send({ status: 'ok' });
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
