@@ -1,15 +1,17 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDir": "./",
     "outDir": "dist",
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
     "composite": true,
     "paths": {
       "@qeetro/types": ["../../packages/types/src"]
-    }
+    },
+    "strict": true,
+    "esModuleInterop": true,
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "generated/**/*"],
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "../../packages/types" }]
 }

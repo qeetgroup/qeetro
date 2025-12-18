@@ -3,23 +3,34 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "prisma": "prisma",
-    "prisma:migrate:dev": "prisma migrate dev"
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "prisma db push",
+    "prisma:pull": "prisma db pull",
+    "prisma:seed": "prisma db seed",
+    "prisma:studio": "prisma studio --config ./prisma.config.ts",
+    "prisma:reset": "prisma migrate reset"
+
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@10.15.0",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.2.0",
+    "@prisma/client": "^7.2.0",
     "@qeetro/types": "workspace:*",
-    "express": "^5.1.0"
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.6.1",
-    "tsx": "^4.20.6"
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.4",
+    "prisma": "^7.2.0",
+    "tsx": "^4.21.0"
   }
 }
