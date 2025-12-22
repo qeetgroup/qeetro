@@ -23,7 +23,7 @@ pnpm build
 In a workspace package or app:
 
 ```ts
-import {} from /* types */ '@qeetro/types';
+import {} from /* types */ "@qeetro/types";
 ```
 
 Ensure consumers reference the `types` entry exposed by this package for TypeScript.
