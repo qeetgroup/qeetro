@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import express, { Express, Request, Response } from "express";
 
 const app: Express = express();
@@ -13,5 +14,5 @@ app.get("/health", (_: Request, res: Response) => {
 });
 
 app.listen(PORT, HOST, () => {
-  console.log(`Server is running on http://${HOST}:${PORT}`);
+  console.log(chalk.green(`Server is running on ${chalk.yellow(`http://${HOST}:${PORT}`)}`));
 });
