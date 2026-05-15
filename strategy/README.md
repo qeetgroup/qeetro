@@ -14,6 +14,33 @@ It is not a generic project management tool, a Jira clone, or Linear with AI bol
 
 Qeetro's long-term ambition is to become the execution substrate for AI-native software organizations: the system where human collaborators and AI agents plan, coordinate, ship, explain, and improve work together under explicit governance.
 
+## Current Market Readout: May 2026
+
+The market has moved faster than the old project-management frame. AI assistants, AI teammates, agents, enterprise search, connected context, MCP access, workflow automation, and AI-powered planning are now visible across the category. Linear, GitHub, GitLab, Notion, ClickUp, Asana, Plane, Motion, Shortcut, Smartsheet, and Coda all publicly claim some form of AI-assisted work, agentic workflow, connected context, or intelligent work management.
+
+The strategic implication is clear: Qeetro should not differentiate by saying it has AI. That claim is already crowded. Qeetro should differentiate by defining and proving a stricter standard: governed software execution.
+
+The market now breaks into four competitive clusters:
+
+1. Modern software execution tools: Linear, Plane, and Shortcut. These are the closest wedge competitors because they serve software teams directly, respect developer workflows, and increasingly position around agents, MCP, or AI-assisted product development.
+2. Code-platform gravity: GitHub and GitLab. They own repositories, pull requests, CI/CD signals, developer identity, and agentic coding. Qeetro should integrate deeply with them and own the execution layer above code.
+3. Broad AI work platforms: Notion, ClickUp, Asana, Monday, Smartsheet, and Coda. They validate demand for connected AI work, but their breadth creates the familiar risks of generic semantics, configuration load, and weaker developer trust.
+4. Adjacent AI productivity tools: Motion and Height. They are useful signals for automatic prioritization, capacity planning, and AI project-management language, but they should not pull Qeetro into personal productivity or scheduling.
+
+This makes Qeetro's wedge narrower and stronger: governed execution intelligence for software teams. The product must prove that it understands software execution more deeply than broad work platforms and governs agentic work more clearly than code-hosting platforms.
+
+The proof should come through five capabilities:
+
+- A software-specific execution graph, not a generic task database.
+- State inference from GitHub, GitLab, comments, docs, releases, incidents, and planning signals.
+- Agent identity, permissions, approval boundaries, and audit from the beginning.
+- Developer-first speed, keyboard UX, APIs, webhooks, SDKs, CLI, and MCP-aware surfaces.
+- Evidence-backed AI outputs that reduce coordination work instead of creating review work.
+
+The near-term roadmap should resist the temptation to build a broad agent marketplace early. The right response to the market is earlier trust infrastructure: permission-aware retrieval, source-backed summaries, AI action logs, agent identity placeholders, explicit data-use controls, and conservative approval boundaries.
+
+See [Market Research Update](11-market-research-2026.md) for source notes and [Competitive Teardown](08-competitive-teardown.md) for competitor-specific strategy.
+
 ## Index
 
 | #   | Document                                                 | What it answers                                                      |
