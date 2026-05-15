@@ -1,280 +1,252 @@
 # AI Philosophy
 
-> **AI in Qeetro is not a feature. It is the substrate.**
+AI in Qeetro is not a feature category. It is a product and architecture assumption.
 
-This document defines how Qeetro thinks about AI — architecturally, strategically, ethically, and operationally. Every AI decision in the company traces back to this document.
+Qeetro is built on the belief that software execution will increasingly involve human collaborators and AI agents working in the same governed substrate. The value is not "AI generated text." The value is reduced coordination overhead, better planning, faster context retrieval, safer automation, and clearer decisions.
 
-## The core thesis
+## Core Thesis
 
-Most "AI-powered" products in 2026 are products with AI features bolted onto an architecture designed before AI was useful. They have a chatbot in the corner. They have a "summarize" button. They have a "draft this for me" affordance. These are useful, but they are tactical.
+Most AI features in work-management products are bolted onto systems designed before AI could reason over work. They summarize tickets, draft text, or answer questions in a chat window. These can be useful, but they do not change the substrate.
 
-Qeetro is built on the inverse premise: **the architecture itself is AI-native, and the AI capabilities flow from the architecture.** This is the difference between a car with a GPS and a car designed for autonomous driving. Both have screens. Only one is the future.
+Qeetro's AI should be substrate-native:
 
-## The five architectural commitments
+- It understands the work graph.
+- It reads tenant-scoped context.
+- It reasons over events, decisions, docs, issues, and code signals.
+- It acts only within explicit permissions.
+- It leaves an audit trail.
+- It is evaluated and observable.
+- It reduces work rather than creating review burden.
 
-### 1. The data model is AI-readable from day one
+## 2026 AI Market Reality
 
-Every piece of state in Qeetro is:
+Public research shows that AI has moved from a novelty layer to a competitive baseline. Linear, GitHub, GitLab, Notion, ClickUp, Asana, Plane, and Motion all publicly market some combination of agents, AI teammates, connected context, AI search, workflow automation, model choice, audit, permissions, or automatic project management.
 
-- **Semantically typed** — we know what it means, not just what it stores.
-- **Richly contextualized** — entities know their relationships to other entities.
-- **Event-sourced** — the history of how a state came to be is preserved and queryable.
-- **Embedded** — every meaningful entity has a vector representation kept in sync with its semantic content.
-- **Grounded** — when AI generates output about an entity, it can be traced back to the source data.
+This raises Qeetro's bar.
 
-This is what makes AI in Qeetro fundamentally different from AI in legacy PM tools. Their data models were designed for transactional CRUD. Ours is designed for inference.
+Qeetro should not ship AI that merely matches the language of the market. It should ship AI that is more grounded, more permission-aware, more explainable, more software-specific, and more measurable in reducing coordination tax.
 
-### 2. The event spine is the AI's nervous system
+## AI Commitments
 
-Every state change in Qeetro emits a structured event. The event log is queryable, replayable, and consumable by AI agents and integrations. AI capabilities are built as consumers of this event spine, not as polling overlays on top of a transactional database.
+### 1. AI Is Embedded In Workflows
 
-This means:
+The primary AI surfaces should live where work happens:
 
-- AI can react to events in real time, not on a cron.
-- AI can reason about causality, not just current state.
-- AI can be tested against historical event streams (replayable evaluation).
-- AI agents can be deployed and rolled back without disturbing the substrate.
+- Issue creation and refinement.
+- Sprint planning.
+- Roadmap review.
+- Search and question answering.
+- Comment and thread summaries.
+- Docs and decision capture.
+- Triage and classification.
+- Dependency and risk detection.
+- Handoff and release summaries.
 
-### 3. AI agents are first-class entities
+Chat can exist, but chat is not the product strategy.
 
-In Qeetro, AI agents are not background processes. They are first-class entities with:
+### 2. Context Is The Moat
 
-- **Identity** — a unique, addressable handle distinct from any human.
-- **Owner** — a human (or team) accountable for what the agent does.
-- **Scoped permissions** — explicit grants on what the agent can read and modify.
-- **Audit trail** — every action the agent takes is logged with context, inputs, and rationale.
-- **Lifecycle management** — agents can be deployed, paused, updated, deprecated, and decommissioned cleanly.
-- **Metering** — agent activity is measured and billable.
+AI quality depends on context quality. Qeetro should invest in a context graph that connects:
 
-This treatment is what allows agents to be deployed safely in enterprise contexts. No other PM tool comes close.
+- Organizations, workspaces, teams, and members.
+- Projects, issues, sprints, roadmaps, docs, and comments.
+- Code references, pull requests, deployments, CI/CD, and incidents.
+- Decisions, ownership, dependencies, and historical execution patterns.
+- Agent actions, permissions, and outcomes.
 
-### 4. Context is the moat
+The context graph should be tenant-scoped, permission-filtered, and explainable.
 
-The quality of AI in Qeetro is a function of the quality of context the substrate captures. We invest, continuously and aggressively, in:
+### 3. Agents Are First-Class Actors
 
-- **Native context** — what happens inside Qeetro is captured with full fidelity.
-- **Integrated context** — every meaningful integration (Git, CI/CD, Slack, Figma, customer systems) feeds the context graph.
-- **Inferred context** — relationships, ownership, dependencies, and intent are extracted continuously.
-- **Historical context** — patterns over time inform predictions about the present.
+Agents are not invisible automations. They are actors in the execution system.
 
-The context graph is unique to each customer's organization. The capability to build the graph is unique to Qeetro. This is the long-term moat.
+Every agent must have:
 
-### 5. AI is composed of layers, not magic
+- Identity.
+- Human or team owner.
+- Purpose.
+- Permission scope.
+- Autonomy level.
+- Audit trail.
+- Lifecycle state.
+- Cost and activity visibility where relevant.
 
-Qeetro's AI stack is layered, evaluable, and composable:
+This is strategically important because AI agents will become part of how teams operate. Qeetro should be the place where that operation is governed.
 
-```
-┌─────────────────────────────────────────────────────────┐
-│ User-facing surfaces (chat, inline, suggestions, agents)│
-├─────────────────────────────────────────────────────────┤
-│ Agent runtime (orchestration, permissions, audit)        │
-├─────────────────────────────────────────────────────────┤
-│ Capability layer (drafting, summarizing, routing,        │
-│   classifying, planning, predicting, querying)           │
-├─────────────────────────────────────────────────────────┤
-│ Retrieval & grounding (RAG, structured query, semantic   │
-│   search, entity resolution)                             │
-├─────────────────────────────────────────────────────────┤
-│ Context graph (entities, embeddings, events, history)    │
-├─────────────────────────────────────────────────────────┤
-│ Model layer (frontier models, fine-tunes, small models)  │
-└─────────────────────────────────────────────────────────┘
-```
+### 4. AI Must Be Grounded
 
-Each layer is independently testable, replaceable, and evaluable. We are not locked to any single model provider. We are not locked to any single retrieval strategy. We can replace components as the underlying technology evolves — which it will, rapidly.
+AI outputs should reference the context they rely on when the output matters. Summaries, recommendations, risk flags, and agent actions should be traceable to source signals.
 
-## The product philosophy of AI in Qeetro
+Grounding protects trust. Without grounding, AI becomes theater.
 
-### AI augments, never replaces accountability
+### 5. Human Accountability Remains
 
-Humans (or agent owners) remain accountable for every decision. AI may draft, recommend, route, summarize, or surface — but never absorbs accountability.
+AI can assist, recommend, draft, route, classify, summarize, and act inside a granted scope. It does not remove human accountability.
 
-### AI must reduce work, not produce it
+High-impact actions require confirmation by default:
 
-An AI feature that creates more reviewing, prompting, or correcting than the work it replaces is a regression. We measure this. We ship AI that quietly removes coordination tax. We refuse to ship AI that demos well and operates poorly.
+- Bulk edits.
+- Permission changes.
+- Roadmap reprioritization.
+- Sprint commitment changes.
+- External notifications with customer impact.
+- Integration or automation changes.
+- Destructive or irreversible actions.
 
-### AI is integrated, not segregated
+### 6. AI Quality Is Evaluated Like Product Quality
 
-AI lives where the work lives. The chat interface is one surface among many. Inline AI in the issue editor, the sprint planner, the roadmap, and the docs is more important than the sidebar chatbot.
+Every meaningful AI capability should have:
 
-### Hallucinations are bugs, not "limitations"
+- Evaluation fixtures.
+- Expected output criteria.
+- Regression checks.
+- Observability for latency, failure, cost, and quality.
+- Safety checks for prompt injection and tenant isolation.
+- Fallback behavior.
 
-When AI produces incorrect output, we treat it as a defect. We invest in retrieval, grounding, evaluation, and constrained generation to reduce the rate. We measure hallucination rates per capability. We publish them internally. We regress when they grow.
+"The model is non-deterministic" is not an excuse for poor product quality.
 
-### AI capabilities are evaluated like code
+### 7. Tenant And Permission Boundaries Are Absolute
 
-Every AI capability has an evaluation suite — golden datasets, regression tests, quality dashboards. AI quality is monitored continuously. Regressions block deployment. We do not ship "AI is non-deterministic" as an excuse.
+AI retrieval, embeddings, logs, generated artifacts, prompts, and agent memory must respect tenant and permission boundaries.
 
-### Latency is a UX commitment
+Qeetro should not use customer data to train shared models without explicit customer consent. AI metadata should be logged safely, with sensitive content protected by policy.
 
-AI features that take longer than the user expects break the experience. We invest in streaming, caching, predictive prefetching, and small-model fallbacks to make AI feel instant where it matters.
+## AI Product Principles
 
-### The customer controls the autonomy frontier
+### Quiet Intelligence Beats Loud AI
 
-For every agent, the customer decides what the agent can do autonomously and what requires human approval. The default frontier is conservative. Customers can expand it deliberately. They can never have it expanded for them.
+The best AI often removes work without drawing attention to itself. A correctly routed issue, a ready sprint summary, or a surfaced dependency can be more valuable than a flashy generated plan.
 
-## What we will _not_ do
+### Suggest Before Acting
 
-### We will not ship AI features for the demo
+Autonomy should increase gradually. The default path is recommend, then let users accept, edit, reject, or automate later.
 
-"Look, it can write a roadmap!" is a demo. "It writes a roadmap that the team accepts without rewriting" is a product. We ship the latter or we ship nothing.
+### Explain Confidence And Evidence
 
-### We will not use customer data to train shared models without explicit consent
+Where possible, AI should communicate why it believes something and what evidence it used. Confidence should shape UX. Uncertain outputs should ask for clarification or stay conservative.
 
-Per-tenant data isolation is absolute. Customers may opt in to per-tenant fine-tuning with full transparency. We do not sneak training data out of one customer to benefit another. Ever.
+### Keep The User In Control
 
-### We will not build a "general-purpose AI assistant"
+Users should be able to disable, tune, inspect, or override AI behavior. Control should be clear without requiring users to become prompt engineers.
 
-We are not building Claude or ChatGPT. We are building AI that is deeply specialized for software execution. Generality is a trap. Depth is the moat.
+### Do Not Measure Developers Like Machines
 
-### We will not lock customers to a single model provider
+AI should not become a surveillance system. Qeetro should measure work health, flow, risk, and outcomes. It should not score individual developers by reductive productivity metrics.
 
-The model layer evolves rapidly. We architect for swappability. Customers should benefit from frontier improvements without our intervention.
+## AI Capability Waves
 
-### We will not ship AI that surveils developers
+### Wave 0: Trust Foundations
 
-We measure outcomes, not keystrokes. We do not build features that score individual contributors on AI-derived metrics. The product must be safe for engineers to love.
+Purpose: make AI and agents governable before Qeetro asks customers to trust them.
 
-### We will not ship AI that replaces decision-making in high-stakes contexts
+Capabilities:
 
-Sprint planning, prioritization, and architectural decisions are recommended by AI but decided by humans. Closing tickets, drafting summaries, routing notifications — those are appropriate for autonomous action with audit. The dividing line is documented per capability.
+- Permission-aware retrieval.
+- Source citations for important AI outputs.
+- AI action logs.
+- Agent identity placeholders for first-party and external agents.
+- Enable, disable, and approval controls for AI workflows.
+- Model gateway abstraction.
+- Evaluation fixtures for core AI tasks.
 
-## How AI features are sequenced
+Wave 0 is not a customer-facing agent platform. It is the trust layer that prevents later AI features from becoming unsafe or theatrical.
 
-We ship AI in waves of escalating ambition. We do not ship a wave until the prior wave is operationally healthy.
+### Wave 1: Friction Reduction
 
-### Wave 1: AI that reduces friction (Year 1)
+Purpose: save time in daily workflows.
 
-- Inline drafting (issue descriptions, PRDs, comments)
-- Summarization (threads, sprints, docs)
-- Smart classification (priority, type, ownership)
-- Semantic search across the workspace
-- Inline answer surfaces ("ask anything about your work")
+Capabilities:
 
-### Wave 2: AI that reduces coordination (Year 1–2)
+- Issue drafting and refinement.
+- Thread and sprint summaries.
+- Semantic search over workspace context.
+- Suggested labels, priority, owner, and issue type.
+- Handoff summaries.
+- Doc and decision summaries.
 
-- Status synthesis (from raw signals to executive-ready summaries)
-- Risk and blocker detection
-- Smart routing (the right person notified at the right time)
-- Sprint composition recommendations
-- Dependency surfacing
+### Wave 2: Coordination Reduction
 
-### Wave 3: AI agents (Year 2–3)
+Purpose: reduce manager and team coordination effort.
 
-- First-party Qeetro agents (planner, scribe, router, librarian, analyst)
-- First-class agent identity, permissions, audit
-- Agent marketplace beta — third-party agents can be deployed in customer workspaces
-- Per-tenant agent observability
+Capabilities:
 
-### Wave 4: Autonomous coordination (Year 3–5)
+- Status synthesis from work signals.
+- Blocker detection.
+- Dependency surfacing.
+- Sprint scope recommendations.
+- Roadmap risk summaries.
+- Smart notification routing.
 
-- Continuous reconciliation between intent and execution
-- Proactive sprint and roadmap optimization
-- Cross-team dependency negotiation
-- Predictive risk modeling at the portfolio level
-- Agent-to-agent collaboration within organizational guardrails
+### Wave 3: Governed Agents
 
-Each wave depends on the architecture of the prior. Wave 4 is not possible without the context graph, agent platform, and event spine being well-developed in Waves 1–3.
+Purpose: allow AI collaborators to perform scoped recurring work.
 
-## How AI quality is measured
+Capabilities:
 
-We measure AI on five dimensions, per capability:
+- Planning agent.
+- Triage agent.
+- Scribe agent.
+- Release summary agent.
+- Documentation maintenance agent.
+- Agent audit and approval workflows.
 
-| Dimension       | What we measure                                                     |
-| --------------- | ------------------------------------------------------------------- |
-| **Correctness** | Hallucination rate, factual accuracy, retrieval precision           |
-| **Helpfulness** | User accept/edit/reject rates, downstream completion rates          |
-| **Latency**     | p50, p95, p99 response times across surfaces                        |
-| **Cost**        | Cost per invocation, cost per outcome, cost trajectory              |
-| **Safety**      | Incidence of unsafe outputs, permission violations, audit anomalies |
+### Wave 4: Autonomous Coordination
 
-Every AI capability has dashboards on all five. Regressions are treated like outages.
+Purpose: proactively reconcile intent and execution under customer-defined policies.
 
-## Privacy, safety, and governance
+Capabilities:
 
-### Privacy
+- Continuous roadmap and sprint risk monitoring.
+- Cross-team dependency negotiation support.
+- Automated stale-work cleanup suggestions.
+- Agent-to-agent collaboration under governance.
+- Predictive execution insights.
 
-- Customer data is never used to train shared models without explicit, granular, revocable consent.
-- Per-tenant fine-tuning is opt-in, transparent, and deletable.
-- Inference logs are encrypted and retained per customer policy.
-- We support customer-managed encryption keys for AI-derived artifacts.
+Wave 4 depends on trust earned in Waves 1 through 3. Do not skip the trust-building sequence.
 
-### Safety
+## AI Architecture Implications
 
-- Every AI capability has guardrails appropriate to its risk profile.
-- Autonomous agent actions in high-stakes contexts require dual control or human approval by default.
-- Output filtering is layered (prompt-level, model-level, post-generation).
-- Adversarial robustness is tested continuously.
+Qeetro should design for:
 
-### Governance
+- Versioned prompt templates.
+- Structured output validation.
+- Tenant-scoped retrieval.
+- Model gateway abstraction.
+- MCP and external-agent integration governance.
+- AI task queues.
+- Evaluation harnesses.
+- Audit logs for AI actions.
+- Policy checks before agent actions.
+- Cost and latency observability.
+- Provider failure fallback.
 
-- Customers see exactly what AI agents are doing in their workspace.
-- Customers control which AI capabilities are enabled per team.
-- Customers control which models can be used for which capabilities.
-- Customers receive complete audit logs of AI activity.
-- Compliance frameworks (SOC2, ISO 27001, HIPAA-ready, GDPR, EU AI Act, US executive orders) are mapped to product features explicitly.
+The model provider is not the moat. The context, workflows, governance, and evaluation discipline are the moat.
 
-## The model strategy
+## What Qeetro Will Not Do With AI
 
-### We use the best model for the job
+Qeetro will not:
 
-Frontier models for high-stakes generation. Smaller, specialized, cheaper models for routine classification and routing. Embedding models tuned for our domain. We are not loyal to a single provider.
+- Ship AI because it demos well but fails in daily use.
+- Hide AI actions from users.
+- Let agents act outside explicit scopes.
+- Train shared models on customer data without explicit consent.
+- Use AI to surveil individual developers.
+- Present ungrounded speculation as fact.
+- Force users to prompt-engineer routine workflows.
+- Treat AI failures as acceptable magic.
 
-### We invest in our own fine-tunes where it matters
+## AI Success Metrics
 
-For high-volume, latency-sensitive, domain-specific capabilities (e.g., issue classification, dependency extraction), we may train our own small models on aggregated, consented data. This is a moat investment, not a cost-saving measure.
+AI should be evaluated by outcomes:
 
-### We architect for model evolution
+- Manual coordination time reduced.
+- Search time reduced.
+- Status update frequency reduced.
+- AI outputs accepted or lightly edited.
+- Hallucination and correction rates decrease.
+- Agent actions are trusted and auditable.
+- Customers expand AI usage after initial adoption.
+- Security teams approve AI usage without exceptional custom controls.
 
-The model layer will improve every quarter. Our architecture must absorb improvements without rewriting capabilities. Abstractions matter.
-
-### We are honest about what models can and cannot do
-
-We do not market capabilities models cannot reliably deliver. We ship what works. We invest in the rest.
-
-## The agent platform philosophy
-
-The agent platform is the most strategically important piece of Qeetro's AI architecture. Its principles:
-
-### Agents must be safe by default
-
-A new agent in a workspace can do nothing until explicitly granted permissions. No implicit trust.
-
-### Agents must be auditable, always
-
-Every action, with context, with rationale, retrievable forever (subject to retention policy).
-
-### Agents must be replaceable
-
-A customer must be able to disable, replace, or roll back any agent — including ours — without disrupting their workflow.
-
-### Agents must be inspectable
-
-Customers must be able to see what an agent has done, what it intends to do, and why.
-
-### Agents must compose
-
-Agents from different vendors must be able to coexist and collaborate in a workspace under unified governance.
-
-### Agents must be metered
-
-Customers see what their agents cost in resources, in actions, in outcomes.
-
-These principles are what allow the agent marketplace to exist responsibly.
-
-## How AI shapes hiring
-
-The AI organization at Qeetro is not a separate team. AI capability ownership lives across product engineering teams, with a small central platform team that owns:
-
-- The context graph and retrieval infrastructure.
-- The agent runtime and orchestration.
-- Model integration, evaluation, and safety.
-- Per-customer evaluation infrastructure.
-
-This structure prevents AI from being siloed and ensures every product team is responsible for the AI capabilities in their surface.
-
-## How this document evolves
-
-The model landscape, the regulatory landscape, and the customer expectation landscape will all shift dramatically over the coming years. This document is reviewed quarterly. The five architectural commitments are stable. The waves and tactical priorities adapt.
-
-The one constant: **AI in Qeetro is the substrate, not a feature.** That commitment never changes.
+The goal is not AI usage for its own sake. The goal is better execution.

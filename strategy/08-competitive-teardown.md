@@ -1,522 +1,315 @@
 # Competitive Teardown
 
-> **Know the incumbents better than they know themselves.**
+This document analyzes the main competitors and adjacent products Qeetro will be compared against.
 
-This document is a deep, unflinching analysis of every meaningful competitor and adjacent player. It is updated quarterly. Sales, product, marketing, and strategy reference this document for every competitive deal, positioning decision, and roadmap conversation.
+The goal is not dismissal. Good competitors teach the product what matters. The strategic question is where each competitor is structurally strong, where it is structurally constrained, and how Qeetro should position without becoming reactive.
 
-The framework for each competitor:
+This version incorporates public internet research from May 15, 2026. See [Market Research Update](11-market-research-2026.md) for the source notes and links.
 
-1. **What they are** (factual)
-2. **What they do well** (intellectually honest)
-3. **Architectural / strategic limitations** (the structural traps)
-4. **AI posture** (their current and likely future stance)
-5. **Where they win against us** (in deals, today)
-6. **Where we win against them** (in deals, today)
-7. **The 5-year trajectory** (where they end up)
-8. **What we learn from them** (the steal-with-pride list)
+## 2026 Competitive Reality
 
----
+The market has changed. AI and agents are no longer rare claims.
 
-## 1. Atlassian Jira
+Linear, GitHub, GitLab, Notion, ClickUp, Asana, Plane, and Motion all publicly market some combination of agents, AI teammates, enterprise search, connected context, AI workflows, MCP, governance, model choice, or automatic project management.
 
-### What it is
+The old competitive claim, "Qeetro has AI and they do not," is false.
 
-The dominant work-management platform for software teams since the mid-2000s. Cloud and Data Center editions. Bundled with Confluence, Bitbucket, and an ecosystem of plugins. Tens of thousands of enterprise customers; tens of millions of seats.
+The stronger claim is:
 
-### What they do well
+Qeetro is the AI-native execution system built specifically for governed software execution, not a generic work platform, not a code-hosting side surface, and not a configurable ticket database with AI features.
 
-- **Enterprise distribution.** They are _everywhere_. Procurement-approved at virtually every Fortune 1000.
-- **Marketplace.** Atlassian Marketplace remains the canonical PM ecosystem with thousands of plugins. Real network effects.
-- **Configurability for IT-style work.** ITSM, change management, and approval workflows are well-supported.
-- **Migration tooling.** Decades of investment in helping enterprises onboard from legacy systems.
-- **Account control.** Bundled pricing with Confluence and Compass creates account-wide stickiness.
+## Competitive Map
 
-### Architectural / strategic limitations
+| Platform       | 2026 Public Posture                         | Core Strength                                     | Structural Constraint                                       | Qeetro Strategy                                               |
+| -------------- | ------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------- |
+| Jira/Atlassian | Enterprise work, service, marketplace, AI   | Enterprise footprint, ITSM, marketplace           | Configuration debt and semantic inconsistency               | Be the modern governed escape path for engineering-led teams  |
+| Linear         | Product development system for teams/agents | Speed, taste, product focus, agents               | Must expand without losing simplicity                       | Beat through governance, cross-tool graph, and category depth |
+| GitHub         | Developer planning plus Copilot agents      | Code proximity, developer identity, PR context    | Product, roadmap, docs, design, and org context sit outside | Integrate deeply and own execution above code                 |
+| GitLab         | DevSecOps lifecycle plus Duo agents         | Integrated code-to-deploy platform, governance    | Strongest inside GitLab-standardized orgs                   | Win cross-tool teams and GitHub-centered orgs                 |
+| Notion         | Connected workspace plus AI team            | Docs, databases, enterprise search, agents        | Flexible document workspace, not strict execution graph     | Use docs as execution context, not generic workspace          |
+| ClickUp        | Everything app plus Brain and Super Agents  | Breadth, consolidation, AI marketing              | Complexity and generic-work sprawl                          | Win by focus, speed, developer trust, and semantics           |
+| Asana          | AI work management and AI teammates         | Enterprise cross-functional workflows, goals      | Not developer-native                                        | Compete only where software execution is central              |
+| Plane          | Projects, knowledge, AI, agents, self-host  | Open source, self-hosting, MCP, migration         | Smaller ecosystem and category ownership still open         | Treat as serious watchlist threat                             |
+| Monday.com     | Visual work management                      | Non-technical teams, templates, GTM               | Weak developer and software-execution gravity               | Avoid broad work-OS competition early                         |
+| Motion         | AI productivity and project manager         | Scheduling, prioritization, capacity intelligence | Personal and general productivity center of gravity         | Learn from time intelligence, do not chase scheduling         |
 
-- **Configurability is the cancer.** The data model varies per-customer. AI cannot reason coherently across instances. Every "Jira AI" feature is fundamentally limited by this.
-- **Performance is structurally bad.** A monolithic, highly-configurable system optimized over 20 years is not going to become fast. They know it. They cannot fix it.
-- **Brand decay.** Engineers, designers, and PMs _hate_ Jira viscerally. The brand is a recruiting headwind for buyers ("we use Jira" is the punchline).
-- **Innovator's dilemma.** Their revenue depends on the configurability that makes them slow and AI-incompatible. Removing it is impossible without breaking customers.
-- **Cloud migration tax.** Jira Cloud is a forced migration that has caused customer pain and opened defection windows.
-- **Atlassian Intelligence is a sidebar.** Their AI investments are bolted on, not architectural.
+## Atlassian Jira
 
-### AI posture
+### What Public Sources Show
 
-Defensive. Atlassian Intelligence ships chatbot-style features and summarizers across the suite. The investment is real but the architecture is not. Their AI roadmap is constrained by:
+Atlassian Marketplace remains a large ecosystem across project management, software development, admin, data, AI, and Rovo agent categories. Jira Service Management emphasizes AI agents, smart context, AI alert grouping, AI-generated incident summaries, DevOps collaboration, enterprise service management, and a broad service-management customer base.
 
-- The need to support every customer's configuration.
-- The lack of a unified semantic data model.
-- A culture optimized for stability and enterprise sales, not category creation.
-- An organizational structure where AI is a horizontal team layered across product silos.
+### What It Does Well
 
-### Where they win against us (today)
+Jira and Atlassian win through enterprise trust, procurement familiarity, marketplace depth, ITSM adjacency, migration history, and bundled suite gravity with Jira, Confluence, Loom, Bitbucket, and related products.
 
-- Mandated enterprise standardization deals where Atlassian is bundled.
-- Procurement-driven processes where Atlassian's enterprise contracts are pre-negotiated.
-- ITSM and change-management use cases (we do not compete here).
-- Customers who _want_ extreme configurability.
-- Migration risk-aversion ("we have 10,000 Jira projects, switching is too painful").
+### Structural Constraints
 
-### Where we win against them (today)
+Jira's configuration strength is its AI weakness. Custom fields, custom statuses, custom workflows, project-specific conventions, and marketplace extensions create semantic inconsistency. AI can summarize and assist, but deep state inference is harder when the meaning of work varies dramatically by customer and project.
 
-- Any deal where engineers or modern engineering leadership have a voice.
-- Any greenfield team or company.
-- Any customer doing toolchain consolidation.
-- Any AI-strategy-driven evaluation.
-- Any deal where speed-to-value is a criterion.
+The brand also carries real cultural baggage with engineers. Many modern teams view Jira as administrative overhead even when enterprise buyers view it as safe.
 
-### 5-year trajectory
+### Qeetro Strategy
 
-Atlassian remains a $20B+ revenue company in 2030. Jira remains the dominant footprint at the very large enterprise tier, especially for IT-style work. But it cedes the AI-native software execution category to a new entrant. Their growth becomes maintenance growth, not category growth. They become the IBM of work management.
+Do not compete as Jira with a faster interface. Compete as the modern governed execution substrate for engineering-led teams that need enterprise confidence without Jira's admin-heavy model.
 
-### What we learn from them
+The sales frame is not "Jira has no AI." The frame is "Jira's AI inherits Jira's configuration debt."
 
-- Marketplace strategy. Their ecosystem is the model to emulate (and improve on).
-- Enterprise migration tooling. We will need this within 24 months.
-- The cost of configurability. We will not repeat it.
-- The cost of brand decay. We protect ours from day one.
+## Linear
 
----
+### What Public Sources Show
 
-## 2. Linear
+Linear now positions as "the product development system for teams and agents." Public pages highlight AI workflows, Triage Intelligence, semantic search, duplicate detection, Pulse updates, Linear MCP, agents, code intelligence, diffs, monitoring, initiatives, releases, customer requests, insights, and dashboards.
 
-### What it is
+This is a major correction to older strategy. Linear is no longer accurately described as only a faster issue tracker.
 
-The premium issue tracker for modern software teams. Founded ~2019. Beautiful UI, fast performance, opinionated workflows. The bottom-up choice of AI-native scale-ups for the past 5 years. Series C, ~$400M valuation as of recent rounds.
+### What It Does Well
 
-### What they do well
+Linear has exceptional product taste, speed, keyboard ergonomics, developer love, clear workflows, strong brand, and an increasingly credible agent-forward product story.
 
-- **Performance.** Genuinely fast. The benchmark to beat.
-- **Design.** Best-in-class UI/UX in the category. Engineers genuinely enjoy using it.
-- **Opinionated defaults.** No custom statuses (until recently). No issue type configurability. Strong defaults.
-- **Roadmap quality.** Recent additions (Initiatives, Projects) have closed gaps without bloating.
-- **Brand.** Strong, premium positioning. Engineers evangelize it unprompted.
-- **Bottom-up motion.** Land via individual teams, expand company-wide. Self-serve to mid-five-figure deals.
+### Structural Constraints
 
-### Architectural / strategic limitations
+Linear's challenge is not capability absence. It is strategic tension. To become a full execution substrate, Linear must add governance, broader context, multi-team coordination, cross-tool semantics, enterprise depth, and agent accountability without losing the simplicity that made it loved.
 
-- **The legacy-category architectural ceiling.** Linear is the _peak_ of the legacy issue-tracker category. It cannot become AI-native execution without architectural surgery they appear unwilling to perform.
-- **AI investment is incremental.** Their AI features (Asks, AI suggestions) are useful but bolted onto the existing model. Not a substrate-level commitment.
-- **No agent identity model.** They cannot represent AI agents as collaborators. Retrofitting requires invasive changes to auth, audit, and billing.
-- **Cross-functional surface is thin.** Strong for engineering, weaker for design/PM/devrel collaboration. Notion or Slack still required.
-- **Enterprise readiness is growing but not native.** SSO, SAML, audit logs added over time. The enterprise motion is real but second-generation.
-- **Pricing pressure as they grow.** Their per-seat model gets expensive at scale; some enterprises are pushing back.
-- **Cultural rigidity around opinions.** Their strength (opinionated defaults) becomes a weakness when customers need flexibility for specific workflows. They sometimes refuse to ship things customers genuinely need.
+It may succeed. Qeetro should treat Linear as the most serious direct competitor in the wedge.
 
-### AI posture
+### Qeetro Strategy
 
-Real but incremental. Linear has shipped meaningful AI features, but the _architecture_ underneath remains a beautiful issue tracker. Their public commentary suggests they see AI as a layer, not a substrate. This is the gap we exploit.
+Beat Linear through:
 
-If Linear pivots aggressively into AINES messaging, they will face the same architectural constraints as Atlassian, just at smaller scale and with younger debt. They will move faster than Atlassian but slower than us.
+- Deeper governed agent model.
+- Stronger evidence and audit trails for AI outputs.
+- Cross-tool software execution graph across code, docs, roadmap, customer feedback, design, dependencies, and decisions.
+- Better migration from heterogeneous stacks, not only issue trackers.
+- Category authorship around AI-Native Execution Systems.
 
-### Where they win against us (today)
+Qeetro cannot beat Linear with generic design polish. It must beat Linear with a more serious execution substrate.
 
-- Bottom-up trial bake-offs where the engineering team falls in love before any AI evaluation matters.
-- Teams whose dominant pain is "Jira is bad," not "we need AI-native execution."
-- Companies that already have Linear and have not yet hit its scale ceiling.
-- Pure issue-tracking use cases where AI value is unclear.
+## GitHub
 
-### Where we win against them (today)
+### What Public Sources Show
 
-- Companies that have hit the cross-team coordination ceiling of Linear (~100+ engineers).
-- AI-native companies who have audited their toolchain for AI-readiness.
-- Customers who want unified docs + execution + agents in one substrate.
-- Enterprise deals requiring deep governance and AI agent management.
-- Any "what comes after Linear?" conversation.
+GitHub Issues and Projects support sub-issues, custom fields, templates, automations, project insights, tables, boards, roadmaps, CLI, mobile, and tight issue and pull request integration. GitHub Copilot emphasizes agents, third-party agents, model choice, IDE and CLI workflows, MCP integrations, enterprise controls, audit logs, and developer context.
 
-### 5-year trajectory
+### What It Does Well
 
-Linear remains a strong, well-loved product with a meaningful customer base. They expand into roadmapping, docs, and limited AI capabilities. They reach $500M+ ARR. They are acquired by a larger player (Atlassian, GitHub/Microsoft, Salesforce) by 2030 — or they raise late-stage growth capital and remain independent as a premium niche player. They do not, structurally, become the AINES leader.
+GitHub owns developer identity, repository context, pull requests, issues, developer distribution, code workflows, API quality, CLI habits, and AI-assisted coding.
 
-If they make an aggressive architectural pivot in the next 18 months — replatforming for agents, inference, context — they become our most credible direct competitor. We must move faster than they can pivot.
+### Structural Constraints
 
-### What we learn from them
+GitHub's center of gravity is code. Product strategy, roadmap intent, design context, customer feedback, docs, executive reporting, and cross-functional coordination only partly live there.
 
-- The performance bar.
-- The opinionation discipline.
-- The bottom-up motion design.
-- The brand investment.
-- The risk of getting stuck at the local maximum of one's category.
+GitHub can become a stronger planning surface, but it is unlikely to become the neutral execution substrate for every software organization because its core platform remains code hosting and developer collaboration.
 
----
+### Qeetro Strategy
 
-## 3. GitHub Projects (and GitHub Issues)
+Treat GitHub as strategic infrastructure. Integrate deeply with GitHub Issues, Projects, pull requests, commits, reviews, releases, Copilot agents, and MCP flows.
 
-### What it is
+Qeetro should turn GitHub signals into execution clarity while owning the wider graph of product intent, team coordination, roadmap, docs, and delivery risk.
 
-GitHub's native issue tracking and project management surface. Issues have existed since GitHub's founding. Projects (the new generation) launched ~2022. Tightly integrated with the rest of GitHub. Microsoft-owned.
+## GitLab
 
-### What they do well
+### What Public Sources Show
 
-- **Native to where developers live.** Issues are a few keystrokes from PRs, code, and CI.
-- **Free-tier ubiquity.** Every open-source project, every developer, every team has a GitHub account.
-- **Developer-first.** API, CLI, GraphQL, webhooks — all excellent.
-- **Speed.** Fast. Modern UI.
-- **Microsoft distribution.** Bundled with GitHub Enterprise, Copilot, and Azure deals.
-- **Copilot integration.** Real AI investment with the most advanced AI engineering organization on earth (OpenAI partnership and beyond).
+GitLab Agile Delivery positions planning, issues, epics, boards, dependencies, roadmaps, design management, dashboards, value streams, and wikis inside the DevSecOps lifecycle. GitLab Duo Agent Platform emphasizes specialized agents, AI catalog, custom agents, agentic flows, event-driven execution, policy-driven AI controls, traceability, self-hosted models, and DevSecOps context.
 
-### Architectural / strategic limitations
+### What It Does Well
 
-- **Strategically constrained inside GitHub.** Projects cannot grow into a full execution system because that would cannibalize and complicate GitHub's core developer-tools focus.
-- **No cross-functional surface.** PMs, designers, devrel, TPMs, support do not live in GitHub. The substrate is engineering-only.
-- **Roadmap and portfolio thin.** Adequate for small teams; weak at org scale.
-- **Microsoft prioritization.** GitHub competes for Microsoft attention against Azure DevOps, Copilot, Microsoft Loop, Microsoft Planner. Strategic clarity is uncertain.
-- **AI is Copilot-shaped.** Their AI investment optimizes for code, not for execution and coordination. The execution-substrate AI gap is real.
+GitLab has the strongest integrated code-to-deploy platform story. For organizations standardized on GitLab, planning, code, CI/CD, security, deployment, value streams, and AI governance can live in one suite.
 
-### AI posture
+### Structural Constraints
 
-Strong on code AI (Copilot is best-in-class). Weak on execution AI. They have not made — and likely will not make — a substrate-level commitment to AI-native execution because it is outside GitHub's strategic charter.
+GitLab is strongest when the organization chooses GitLab as the software lifecycle standard. Many Qeetro ICP customers are GitHub-centered or mixed-tool. Product, design, customer feedback, Slack, Notion, Figma, and business context still extend beyond GitLab.
 
-### Where they win against us (today)
+### Qeetro Strategy
 
-- Open-source projects (we do not seriously compete).
-- Small teams whose entire workflow is in GitHub.
-- Customers who want one vendor for code + work and accept the execution-system limitations.
-- Cost-sensitive teams using free or low-tier GitHub.
+Do not fight GitLab inside all-in GitLab accounts early. Win mixed-tool and GitHub-centered organizations where the execution layer must coordinate many systems.
 
-### Where we win against them (today)
+Over time, Qeetro can compete in GitLab accounts when customers need execution depth beyond DevSecOps lifecycle management.
 
-- Any team where PMs, designers, or non-engineers are first-class participants.
-- Any team beyond ~30 engineers needing real roadmapping or portfolio management.
-- Any team prioritizing AI-native execution over AI-native coding.
-- Any team that needs a unified docs + execution substrate.
+## Notion
 
-### 5-year trajectory
+### What Public Sources Show
 
-GitHub Projects continues as a meaningful surface for small-team and engineering-only use cases. It does not evolve into a full execution system. Microsoft strategy keeps it constrained. The execution-system layer is left to specialized players. GitHub remains the dominant code platform but cedes the execution category.
+Notion AI now markets a 24/7 AI team, Notion Agent, Custom Agents, enterprise search across Slack, Google Drive, GitHub and more, AI Meeting Notes, custom permissions, model-agnostic workflows, no-training commitments, zero data retention for enterprise, and enterprise security. Notion Projects emphasizes configurable databases, timelines, charts, automations, custom properties, forms, permissions, dependencies, automated sprints, GitHub and Jira integrations, and docs alongside project work.
 
-We will integrate deeply with GitHub. They are an ecosystem partner more than a competitor for our ICP.
+### What It Does Well
 
-### What we learn from them
+Notion wins flexible knowledge work, docs, lightweight databases, bottom-up adoption, templates, and the emotional appeal of a malleable workspace.
 
-- Developer-surface excellence.
-- API/CLI/SDK quality bar.
-- The depth-of-integration play (be deep where it matters most to your buyer).
-- The strategic constraint of being inside a larger company.
+### Structural Constraints
 
----
+Notion's flexibility is also its execution weakness. Teams can model almost anything, which means teams must also maintain the model. Operational semantics are user-created rather than substrate-native.
 
-## 4. Notion
+For software execution, the difference is important. A task database linked to docs is not the same as an execution graph that understands issue state, sprint risk, code signals, dependencies, ownership, agent actions, and roadmap drift.
 
-### What it is
+### Qeetro Strategy
 
-A document-graph product that has expanded into databases, lightweight project management, wikis, and (recently) AI features. ~$10B valuation. Strong consumer and prosumer adoption; growing enterprise.
+Respect Notion as a knowledge workspace and AI context competitor. Do not copy its flexibility. Build docs only where they improve execution context.
 
-### What they do well
+The wedge against Notion is: flexible workspaces help teams describe work, but software teams need a governed system that understands work.
 
-- **Flexibility and creativity.** The block-based document model is beloved.
-- **Brand.** Strong consumer and SMB brand. Recognizable.
-- **Pricing.** Aggressive low-end pricing creates broad adoption.
-- **AI features.** Notion AI shipped early; reasonable summarization and writing assistance.
-- **Bottom-up adoption.** Land via individuals and small teams.
+## ClickUp
 
-### Architectural / strategic limitations
+### What Public Sources Show
 
-- **Document-graph is not a work-graph.** Operational use cases (sprints, dependencies, releases, incidents) are awkward in Notion. Performance degrades. State management gets fragile.
-- **Performance.** Notion is slow. Has been getting slower as features pile up. Their architecture is increasingly strained.
-- **Operational fragility.** Mid-size teams using Notion as their PM tool consistently outgrow it within 12–18 months.
-- **AI features are document-AI.** Useful for writing; weak for execution.
-- **Enterprise complexity.** Notion's enterprise readiness lags. Growing, but not where Jira or Atlassian-class buyers expect.
+ClickUp markets Brain, Brain2, Super Agents, Ambient Intelligence, connected apps through MCP, enterprise search, premium model access, AI notetaker, AI fields, AI cards, chat, docs, dashboards, 1000+ integrations, software-team workflows, DevOps integrations, Jira migration, AI backlog automation, and an everything-app consolidation story.
 
-### AI posture
+### What It Does Well
 
-Real, but document-shaped. Notion AI helps you write things and summarize things. It does not infer the state of work, manage agents, or reduce coordination tax in the way an execution system requires.
+ClickUp is aggressive, broad, marketing-savvy, and serious about AI language. It offers a large feature surface and makes a clear consolidation pitch: replace many tools with one AI work platform.
 
-### Where they win against us (today)
+### Structural Constraints
 
-- Documentation, knowledge bases, internal wikis (we do not compete primarily here).
-- Tiny teams that want one tool for everything.
-- Companies whose work is genuinely document-centric (some agencies, content businesses).
-- Cost-conscious early-stage startups.
+The everything-app strategy creates product risk: cognitive load, configuration, slow workflows, generic semantics, and weak developer love relative to Linear, GitHub, and modern engineering tools.
 
-### Where we win against them (today)
+ClickUp's AI may be useful, but it is built on a broad work OS. Qeetro's opportunity is to be narrower and semantically sharper for software teams.
 
-- Any team whose primary need is execution, not documentation.
-- Any team that has tried Notion for sprints/projects and felt the seams.
-- Any team that values speed at scale.
-- Any team that wants AI to manage work, not just write about it.
+### Qeetro Strategy
 
-### 5-year trajectory
+Do not compete on feature count. Compete on speed, focus, developer trust, software-specific context, and governance clarity.
 
-Notion remains the leader in flexible documents and lightweight knowledge management. They make further moves into PM but cannot win the execution category structurally. They expand AI features but remain document-AI-shaped. They are a long-term ecosystem partner more than a head-on competitor for our ICP. We will integrate with Notion as a docs source.
+ClickUp validates the consolidation pain. Qeetro should reject ClickUp's breadth as the way to solve it.
 
-### What we learn from them
+## Asana
 
-- Block-based composability for the parts of our product that are document-shaped.
-- Aggressive bottom-up motion.
-- The cost of letting performance regress.
+### What Public Sources Show
 
----
+Asana AI emphasizes AI Teammates, AI Studio, smart workflow galleries, smart assists, AI connectors, embedded AI in work, trust controls, permissions, partner data restrictions, and enterprise workflow automation. Asana Goals connects company objectives to projects, portfolios, dashboards, status, and automatic progress tracking.
 
-## 5. ClickUp
+### What It Does Well
 
-### What it is
+Asana is credible in cross-functional enterprise work management, goals, portfolios, status, and business workflow automation. It has a mature enterprise brand and a broad organizational use-case map.
 
-A "work OS" attempting to be everything for everyone. Tasks, docs, chat, whiteboards, goals, time tracking, dashboards, AI. ~$4B valuation. Aggressive marketing.
+### Structural Constraints
 
-### What they do well
+Asana is not developer-native. It does not naturally own code signals, pull requests, technical decisions, agent-assisted development, or engineering workflow ergonomics.
 
-- **Marketing.** Heavy spend, broad reach.
-- **Feature breadth.** They ship constantly.
-- **Pricing.** Aggressive low-end pricing.
-- **Acquisition motion.** They land a lot of small teams.
+### Qeetro Strategy
 
-### Architectural / strategic limitations
+Win software teams first. Compete with Asana only when software execution is the center of the workflow.
 
-- **The everything trap.** Trying to be everything for everyone results in a product that is mediocre at everything.
-- **Performance.** Slow, often very slow, especially as workspaces grow.
-- **UX bloat.** Overwhelming surface area; cognitive load is high.
-- **Configuration overload.** Same disease as Jira at lower maturity.
-- **Engineering culture mismatch.** Few serious software engineering organizations adopt ClickUp.
-- **Retention.** Aggressive acquisition; uncertain long-term retention at meaningful tiers.
+Asana teaches Qeetro that AI trust, permissions, workflow galleries, and executive alignment matter. It also warns against drifting into generic enterprise work management too early.
 
-### AI posture
+## Plane
 
-Marketing-heavy ("ClickUp Brain"). Substrate-light. AI features are bolted onto the existing kitchen-sink architecture and inherit its limitations.
+### What Public Sources Show
 
-### Where they win against us (today)
+Plane positions around project management and knowledge management for teams and agents. It offers projects, wiki, Plane AI, agents, self-hosting, air-gapped deployment, mobile, apps and agents, MCP, Slack integration, APIs, webhooks, SDKs, Projects-as-Code, migration tooling, enterprise security, AI credits, importers, GitHub and GitLab sync, SSO, LDAP, audit logs, and workflows.
 
-- Generic SMB work-management deals (we do not compete).
-- Cross-functional teams in non-software contexts (marketing agencies, ops shops).
-- Cost-driven decisions at the low end.
+### What It Does Well
 
-### Where we win against them (today)
+Plane is developer-friendly, self-hostable, open-source-associated, migration-aware, and increasingly AI-forward. It is especially relevant for regulated, sovereign, air-gapped, cost-sensitive, or open-source-friendly buyers.
 
-- Every software engineering deal we are in.
-- Any deal where the buyer cares about engineering velocity, performance, or AI quality.
+### Structural Constraints
 
-### 5-year trajectory
+Plane's breadth is growing quickly, which may create the same complexity risk that affects broader work platforms. Its category authorship is still open, and its commercial ecosystem is smaller than Atlassian, GitHub, Linear, Notion, or ClickUp.
 
-ClickUp continues as a player in the SMB generalist work-management market. They are not a meaningful competitor in our category. They may attempt AI-native messaging; the architecture will not support it.
+### Qeetro Strategy
 
-### What we learn from them
+Treat Plane as a serious watchlist competitor, not a minor open-source alternative.
 
-- The cost of becoming a generalist. It is the trap we must not fall into.
-- The risk of confusing "shipping features" with "delivering value."
+Do not chase full self-hosting in the MVP, but preserve architectural optionality for dedicated cloud, sovereign cloud, and eventual self-hosted deployment. Qeetro should also study Plane's Projects-as-Code and MCP posture because they map directly to developer trust.
 
----
+## Monday.com
 
-## 6. Monday.com
+### Source Confidence
 
-### What it is
+Fetch attempts against Monday AI, monday dev, and monday work management pages did not extract reliable content. This section should be refreshed manually.
 
-A "work OS" for cross-functional business teams. Public company, ~$11B market cap. Strong in marketing, project management, sales operations, HR. Visual, board-driven, color-coded.
+### Strategic Reading
 
-### What they do well
+Monday remains a strong broad work-management and visual workflow platform, especially for non-technical teams. It is not a primary wedge competitor for Qeetro's engineering-led target market.
 
-- **Visual UX.** Boards, colors, and customization are appealing for non-technical users.
-- **Cross-functional positioning.** Strong in marketing and operations functions.
-- **Public company discipline.** Real revenue, real customers, real go-to-market machine.
-- **Templates.** Extensive template library accelerates onboarding for non-technical use cases.
+### Qeetro Strategy
 
-### Architectural / strategic limitations
+Avoid broad work-OS comparisons early. Qeetro can coexist with Monday in enterprises where engineering needs a specialized execution substrate and other departments use Monday.
 
-- **Engineering-team mismatch.** Software engineering organizations rarely adopt Monday for execution.
-- **Configurability burden.** Boards become unwieldy at scale; admin overhead grows.
-- **AI features are generic.** Not optimized for software execution context.
-- **Performance.** Adequate, not exceptional.
+## Motion
 
-### Where they win against us (today)
+### What Public Sources Show
 
-- Cross-functional and operations use cases (we do not compete).
-- Marketing-led PM evaluations.
+Motion markets AI tasks, AI projects, AI docs, AI notetaker, AI calendar, AI workflows, AI reports, automatic prioritization, AI project manager, predictive project completion, capacity planning, and reduced check-ins. It positions against project management tools that require manual babysitting.
 
-### Where we win against them (today)
+### What It Does Well
 
-- Every software engineering deal we are in.
+Motion makes the value of AI planning tangible. Automatic prioritization, time-blocking, capacity-aware scheduling, and predictive completion are easy for buyers to understand.
 
-### 5-year trajectory
+### Structural Constraints
 
-Monday remains a strong cross-functional work platform for non-engineering use cases. They are not a meaningful competitor in our category. We may co-exist in customers where engineering uses Qeetro and other functions use Monday — eventually displacing as adjacent functions adopt our substrate.
+Motion's center of gravity is personal and general productivity. It is not a software execution substrate and does not naturally own developer workflows, code signals, technical dependencies, or product execution semantics.
 
-### What we learn from them
+### Qeetro Strategy
 
-- Public-company go-to-market discipline.
-- Template-driven onboarding (worth borrowing for our specific use cases).
+Learn from Motion's capacity and prioritization UX. Do not become a calendar or personal productivity product.
 
----
+The useful lesson is that buyers understand "the system tells me what needs attention now." Qeetro should apply that to software execution health, not individual scheduling.
 
-## 7. Asana
+## Trello, Coda, Wrike, Smartsheet, Basecamp, Shortcut, Height
 
-### What it is
+These products matter in specific deals but do not define Qeetro's strategic battlefield.
 
-A long-running cross-functional work management platform. Public company. Strong in marketing, operations, and large-enterprise cross-functional initiatives. Founded by Dustin Moskovitz.
+- Trello remains lightweight kanban.
+- Coda is a doc-app workspace.
+- Wrike and Smartsheet are enterprise project management with less developer pull.
+- Basecamp is philosophy-led small-team collaboration.
+- Shortcut is software project management but currently lower-momentum than Linear and Plane.
+- Height remains a watchlist product for AI-forward project management, but public source extraction failed during this research pass.
 
-### What they do well
+## Competitive Lessons
 
-- **Enterprise cross-functional positioning.** Strong with marketing, ops, and operations-heavy initiatives.
-- **Goal management (OKR-style).** Decent surface for goals and initiatives.
-- **Stable enterprise relationships.** Multi-year contracts with large customers.
-- **AI investment.** Asana Intelligence is real and growing.
+From Jira: enterprise distribution, marketplace depth, and migration maturity matter, but configurability creates semantic debt.
 
-### Architectural / strategic limitations
+From Linear: speed, taste, developer love, and agent-forward product development are the benchmark.
 
-- **Engineering-team mismatch.** Same as Monday.
-- **Slow.** Not a performance leader.
-- **Generic data model.** Same configurability traps.
-- **Brand drift.** Has lost mindshare to Linear, Notion, and Monday in recent years.
+From GitHub: developer surfaces and code-adjacent AI agents are strategic gravity.
 
-### Where they win against us (today)
+From GitLab: integrated lifecycle plus policy-driven agent governance is a serious enterprise pattern.
 
-- Cross-functional enterprise deals (not our market).
-- Asana-loyal large enterprises.
+From Notion: flexible docs and enterprise search create adoption, but execution semantics matter.
 
-### Where we win against them (today)
+From ClickUp: broad consolidation is compelling in sales and dangerous in product.
 
-- Every software engineering deal we are in.
+From Asana: enterprise AI trust language and workflow automation are now buyer expectations.
 
-### 5-year trajectory
+From Plane: self-hosting, MCP, projects-as-code, importers, and developer extensibility can become differentiators.
 
-Asana remains a player in cross-functional enterprise work management. Not a head-on competitor in our category. Possible acquisition target if growth stalls.
+From Motion: automatic prioritization and capacity intelligence are easy-to-understand AI value.
 
-### What we learn from them
+## Strategic Rules
 
-- Goal/OKR surface design (relevant for our roadmap features).
-- The risk of losing brand momentum to younger entrants.
+### 1. Do Not Claim AI As The Difference
 
----
+AI is now common. The difference must be governed software execution.
 
-## 8. Plane
+### 2. Treat Linear And Plane As Serious Direct Threats
 
-### What it is
+They are closest to Qeetro's wedge buyer and product philosophy.
 
-An open-source Linear alternative. Self-hostable. Active community. Series A.
+### 3. Treat GitHub And GitLab As Infrastructure First
 
-### What they do well
+Integrate deeply before competing directly.
 
-- **Open source.** Real OSS community. Strong for self-hosted/regulated buyers.
-- **Linear-like UX.** Familiar to engineers.
-- **Pricing.** Free for self-hosted; cost-effective.
+### 4. Learn From Broad Platforms Without Copying Their Breadth
 
-### Architectural / strategic limitations
+Notion, ClickUp, and Asana validate demand for connected AI work. They also show how quickly breadth creates complexity.
 
-- **OSS-product duality tension.** Strategy split between community and commercial.
-- **Limited AI investment.** Catching up.
-- **Smaller ecosystem.** No marketplace to speak of.
+### 5. Move Governance Earlier
 
-### Where they win against us
+AI action logs, permission-aware retrieval, source-backed answers, agent identity, approval boundaries, and data-use controls are MVP substrate concerns, not late enterprise add-ons.
 
-- Self-hosted requirements (regulated industries, government, sovereign-cloud buyers).
-- OSS-mandate buyers.
-- Cost-driven engineering teams.
+### 6. Make Migration Product-Led
 
-### Where we win against them
+Every major competitor markets migration, importers, integrations, or connected context. Qeetro must treat migration from Jira, Linear, GitHub Projects, Notion, ClickUp, and Plane as a product wedge.
 
-- Every commercial cloud deal.
-- Every AI-native evaluation.
+## Competitive Intelligence Cadence
 
-### 5-year trajectory
+- Monthly during seed stage: refresh competitor AI, agent, MCP, integration, and governance moves.
+- Quarterly after product launch: update this teardown with win-loss, customer interview, and usage evidence.
+- Annually: reassess whether the category frame still describes market reality.
 
-Plane remains a viable open-source player. Useful as a pressure-release for self-hosted demand. Not a head-on threat in our ICP.
+## Strategic Rule
 
-### What we learn from them
+Qeetro should monitor competitors, respect their strengths, and steal useful patterns without copying their product shape.
 
-- The OSS go-to-market option (we may consider open-sourcing select primitives strategically — see [07-differentiation-moats.md](07-differentiation-moats.md)).
-
----
-
-## 9. Height
-
-### What it is
-
-A "self-driving" project management product with strong AI positioning. Series A. Pivoted aggressively to AI in 2024.
-
-### What they do well
-
-- **Early AI-native messaging.** They have been claiming AI-native PM longer than most.
-- **Some genuine AI features.** Auto-classification, smart suggestions.
-- **Modern UX.** Comparable to Linear.
-
-### Architectural / strategic limitations
-
-- **Subscale.** Limited customer base, limited capital.
-- **Messaging without depth.** Their AI features are useful but not substrate-level.
-- **Limited enterprise readiness.**
-
-### Where they win against us
-
-- Early-stage startups specifically attracted to "AI PM" messaging who do not need depth.
-
-### Where we win against them
-
-- Any deal at meaningful scale or with depth requirements.
-
-### 5-year trajectory
-
-Height either pivots into a sustainable niche, gets acquired, or fades. Their messaging is the closest to ours in the market — we must be substantively, demonstrably deeper.
-
-### What we learn from them
-
-- The risk of claiming AI-native without architectural depth. We must be the inverse: depth first, messaging second.
-
----
-
-## 10. Motion
-
-### What it is
-
-An AI-driven calendar and task auto-scheduling product. Different category but adjacent to PM. Consumer-prosumer focused.
-
-### What they do well
-
-- **Calendar intelligence.** Strong auto-scheduling.
-- **AI-prominent positioning.** Brand reads as AI-first.
-
-### Architectural / strategic limitations
-
-- **Different category.** Personal productivity, not team execution.
-- **Limited team-level features.**
-
-### Relevance
-
-Not a direct competitor for our ICP. Worth watching as an example of AI-prominent positioning in an adjacent category.
-
----
-
-## 11. Adjacent and emerging players
-
-### Microsoft Loop / Planner / Azure DevOps
-
-Microsoft's fragmented work-management strategy. Strong in Microsoft-loyal enterprises. Constrained by internal competition for Microsoft attention. Will compete in Microsoft accounts; will not define the category.
-
-### Coda
-
-Document-database hybrid. Similar shape to Notion. Smaller. Not a meaningful competitor in our ICP.
-
-### Trello
-
-Atlassian's lightweight kanban product. Used by individuals and small teams. Strategic role inside Atlassian unclear. Not a meaningful competitor.
-
-### Smartsheet
-
-Spreadsheet-driven enterprise PM. Old-school. Not a meaningful competitor in our ICP.
-
-### Wrike
-
-Cross-functional enterprise PM. Citrix-acquired. Not a meaningful competitor.
-
-### Basecamp
-
-Opinionated, philosophy-driven small-team PM. Not a meaningful competitor at our ICP scale.
-
-### New AI-native entrants
-
-A new AI-native PM entrant will emerge every 6–12 months in 2025–2028. Most will be features pretending to be products. We monitor; we do not panic. The category goes to the player with substrate depth, not to the player with the loudest demo.
-
----
-
-## Competitive intelligence cadence
-
-- **Weekly:** Sales reports on competitive deals (won, lost, why).
-- **Monthly:** Product team reviews competitor releases and AI announcements.
-- **Quarterly:** Full teardown refresh; strategy team owns.
-- **Annually:** Founder + exec team off-site competitive review with 12-month outlook.
-
-## How to use this document
-
-- **In sales calls:** Use the "where we win" sections to anchor positioning. Use the "where they win" sections to qualify out cleanly.
-- **In product reviews:** Reference the "what we learn from them" sections when evaluating roadmap.
-- **In hiring:** Reference the architectural limitations of incumbents to attract talent who want to build the next-generation alternative.
-- **In strategy reviews:** Reference the 5-year trajectories to test whether our assumptions are aging well.
-
-The competitors in this document are not enemies. They are the field. Respecting them — accurately, intellectually honestly, without dismissiveness or fear — is the precondition for beating them.
+The roadmap should be driven by Qeetro's category thesis: reduce coordination tax for software teams through a governed AI-native execution substrate.

@@ -1,100 +1,102 @@
-# The Qeetro Manifesto
+# Manifesto
 
-> Software teams have spent twenty years configuring tools instead of shipping product.
-> Qeetro exists to end that era.
+Software teams do not need another place to move tickets from one column to another.
 
-## The problem we refuse to accept
+They need an execution system that understands the work, reduces coordination cost, and helps humans and AI collaborators move from intent to shipped product with less friction.
 
-Every modern product team is running on infrastructure that was designed for a world that no longer exists.
+Qeetro exists because the old work-management category is no longer adequate for the way software organizations now operate.
 
-- **Jira** was designed for waterfall-era IT departments. It survived because nothing replaced it at the enterprise tier — not because it is good.
-- **Linear** is beautiful, but it is a faster Jira. It optimizes the _form_ of issue tracking. It does not change the _substance_ of how work moves through an organization.
-- **Notion** is a document graph pretending to be a work system. It collapses under operational load.
-- **ClickUp / Monday / Asana** chase feature parity. The result is bloat, configuration debt, and admin overhead measured in full-time-equivalents.
-- **GitHub Projects** is a thin layer over issues. It assumes the rest of the org doesn't exist.
+## The Problem We Refuse To Accept
 
-The cost of this fragmentation is not measured in license fees. It is measured in:
+The modern software team is surrounded by tools and still starved for clarity.
 
-- Hours per week spent in standups that exist only because the tool cannot summarize itself.
-- Status updates written by humans because the system cannot infer state.
-- Roadmaps that are out-of-date the moment they are published.
-- Engineering managers who spend 40% of their week as human routers between Jira, Slack, GitHub, Notion, and Figma.
-- Executives flying blind because operational data lives in seven systems, none of which agree.
+The work is split across issue trackers, code hosts, chat, docs, design tools, customer systems, CI/CD, incident tools, and dashboards. Each tool holds a fragment of truth. None of them holds the execution model.
 
-This is not a UX problem. This is a **substrate problem**. The substrate of work management was designed before AI, before realtime collaboration was a primitive, before event-driven systems were the default, and before software teams were the dominant unit of value creation in the economy.
+The result is coordination tax:
 
-## What Qeetro is
+- Standups that exist because the system cannot summarize state.
+- Weekly status updates written by humans because the work substrate cannot infer reality.
+- Roadmaps that decay the moment they are published.
+- Managers acting as routers between Jira, Linear, Slack, GitHub, Notion, Figma, and spreadsheets.
+- Engineers context-switching away from building just to keep planning artifacts current.
+- Executives asking for reports because the system of work cannot explain itself.
 
-Qeetro is an **AI-native execution system** for product and engineering organizations.
+This is not merely a UX problem. It is a substrate problem.
 
-It is not a "Jira alternative." It is not "Linear with AI." It is not "Notion for projects." Those framings concede the category to the incumbents.
+The dominant systems were designed before AI could reason over work context, before realtime collaboration became table stakes, before software became the central operating system of most companies, and before AI agents began joining teams as active participants.
 
-Qeetro is the first execution system designed on the assumption that:
+## What Qeetro Is
 
-1. **AI is a peer collaborator**, not a feature.
-2. **The system should infer state**, not require humans to report it.
-3. **Work is a graph of intent**, not a list of tickets.
-4. **Coordination is a tax**, and the substrate's job is to drive that tax to zero.
-5. **Developers are the primary user**, and developer experience determines adoption.
-6. **Enterprise governance and startup speed are not in tension** — they are properties of the same well-designed substrate.
+Qeetro is an AI-native execution system for software teams.
 
-## The non-negotiables
+It is built on five core beliefs:
 
-These are the commitments that bind every employee, every PR, every roadmap decision, every hire, and every line of code:
+1. Work is a graph of intent, state, ownership, context, and evidence.
+2. AI should reduce coordination work, not create new review work.
+3. Human and AI collaborators need identity, permission, audit, and accountability.
+4. The system should infer state from signals instead of forcing humans to report it manually.
+5. Execution speed is a product feature, a business advantage, and an engineering discipline.
 
-### 1. Speed is a feature. Always.
+Qeetro does not exist to make existing project management rituals prettier. It exists to make many of those rituals unnecessary.
 
-If a core interaction takes more than 100ms, it is broken. If onboarding takes more than 5 minutes to first value, it is broken. If a new project takes more than 30 seconds to set up, it is broken.
+## The Commitments
 
-### 2. Configuration is failure.
+### Speed Is Correctness
 
-Every configuration option is an admission that we did not understand the user well enough to choose for them. We choose intelligent defaults. We earn customization through evidence, not through fear of opinionated design.
+Slow execution tools tax every user every day. Core interactions must feel instant. Onboarding must get teams to value quickly. Boards, issues, docs, comments, AI surfaces, search, and realtime updates must be designed with latency budgets from the beginning.
 
-### 3. AI must reduce work, not produce it.
+### Configuration Is Failure
 
-If an AI feature creates more reviewing, prompting, or correcting than the work it replaces, it ships disabled. AI exists to eliminate coordination tax, not to generate impressive demos.
+Configuration is sometimes necessary, but it is not a virtue. A product that asks every team to design its own workflow has transferred product thinking from the vendor to the customer. Qeetro should choose intelligent defaults, expose fewer knobs, and reserve customization for cases with durable evidence.
 
-### 4. The system must explain itself.
+### AI Must Reduce Work
 
-Any user, at any time, must be able to ask "why is this the state of the world?" and receive a structured, accurate answer. No black boxes. No unexplained automations.
+An AI feature that creates more prompting, reviewing, correcting, or babysitting than the work it replaces is a regression. AI must quietly remove repetitive coordination: summarizing, routing, classifying, finding context, detecting blockers, drafting starting points, and explaining state.
 
-### 5. Developers come first.
+### The System Must Explain Itself
 
-API-first. Webhook-first. CLI-first. SDK-first. If a developer cannot script Qeetro from the terminal, we have not finished building it.
+Every important state should be explainable. If Qeetro marks a sprint at risk, routes an issue, recommends a priority, or allows an agent to act, the user should be able to understand why.
 
-### 6. Collaboration is a primitive, not a feature.
+No black-box execution.
 
-Realtime presence, shared cursors, conflict-free editing, and live state propagation are infrastructure, not premium add-ons.
+### Developers Come First
 
-### 7. Enterprise readiness is built in from day one.
+Software teams adopt through engineers. If Qeetro wastes developer time, the product fails. APIs, webhooks, CLI, SDKs, Git workflows, keyboard navigation, and editor-adjacent flows are not secondary surfaces. They are adoption infrastructure.
 
-SSO, SCIM, audit logs, RBAC, data residency, and compliance are not features we bolt on for the upmarket motion. They are properties of a well-designed system.
+### Realtime Is A Primitive
 
-### 8. We will say no, often.
+Modern teams are distributed, asynchronous, and constantly changing state. Realtime collaboration is not a premium add-on. Presence, live issue updates, shared editing, optimistic updates, and reliable resync are part of the substrate.
 
-Most feature requests are symptoms of unclear thinking — sometimes ours, sometimes the user's. Our job is to find the root cause, not to ship the symptom.
+### Enterprise Readiness Must Not Become Enterprise Heaviness
 
-## What Qeetro will never become
+SSO, RBAC, audit logs, tenant isolation, data governance, and compliance readiness should be built into the foundation. They should not make daily work feel like procurement software.
 
-We commit, in writing, to never becoming:
+### Agents Are First-Class Collaborators
 
-- A workflow configuration tool with 47 issue types and 200 custom fields.
-- A "platform" so generic that no team uses more than 20% of it.
-- A consultancy-driven product where success requires a six-month implementation.
-- A toolchain where AI is a sidebar chatbot disconnected from the core data model.
-- A surveillance product that measures developers instead of empowering them.
-- A roadmap-of-roadmaps where the meta-work exceeds the work.
+AI agents will increasingly perform real work: summarize, plan, triage, route, draft, test, and monitor. Qeetro must represent agents explicitly, govern them safely, and make their actions auditable.
 
-## Who this is for
+## What We Will Not Become
 
-This is for the founders, engineers, designers, product managers, and operators who have looked at the current state of work tooling and known, in their bones, that it is not good enough.
+Qeetro will not become:
 
-It is for teams that ship.
+- A generic work OS for every function.
+- A Jira-style configuration maze.
+- A ClickUp-style feature inventory.
+- A surveillance tool for measuring individual developer output.
+- A project-management wrapper around chat.
+- A chatbot bolted onto an old data model.
+- A status-theater product that helps managers look aligned while teams remain blocked.
+- A consultancy product that requires months of implementation before value.
+- A walled garden that traps customer data.
 
-It is for organizations that want to spend their time building the future, not administering tickets about it.
+These are not aesthetic preferences. They are strategic boundaries.
 
-It is for the next generation of software companies — AI-native, globally distributed, ruthlessly focused, and tired of the substrate they inherited.
+## The Company We Are Building
 
-We are building the execution system those teams deserve.
+Qeetro should feel like a company that respects builders.
 
-— _The Qeetro Founding Team_
+Clear. Fast. Opinionated. Technically serious. AI-native without being theatrical. Enterprise-aware without becoming bureaucratic. Ambitious enough to create a category, disciplined enough to say no to most of the category's bad habits.
+
+The future of software work will not be managed through static tickets, manual status rituals, and disconnected docs. It will be coordinated through intelligent execution systems that understand intent, context, state, risk, and accountability.
+
+Qeetro is being built to be that system.

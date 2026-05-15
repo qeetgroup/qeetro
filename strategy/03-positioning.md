@@ -1,156 +1,158 @@
 # Positioning
 
-## The one-liner
+## One-Liner
 
-> **Qeetro is the AI-native execution system for software teams who are done configuring tools and want to ship.**
+Qeetro is the AI-native execution system for software teams who are done configuring tools and want to ship.
 
-## The positioning statement (long form)
+## Long-Form Positioning
 
-> For ambitious software organizations that are constrained by the coordination tax of legacy work-management tools, Qeetro is an AI-native execution system that infers the state of work, eliminates manual status synthesis, and treats AI agents as first-class collaborators. Unlike Jira (configuration-driven), Linear (a faster Jira), Notion (documents pretending to be workflows), or ClickUp/Monday/Asana (feature-bloated generalists), Qeetro is built from the substrate up to make execution faster than the meetings about execution.
+For engineering-led software organizations constrained by manual coordination, fragmented context, and legacy project management tools, Qeetro is an AI-native execution system that keeps work state clear, connects planning to execution signals, and supports human and AI collaborators under governed workflows.
 
-## The wedge
+Public market research from May 2026 shows that AI assistants, AI teammates, agents, enterprise search, and connected work context are now common claims across the category. Qeetro should not position on AI novelty. It should position on a stricter standard: governed software execution context.
 
-Qeetro enters the market through a single, sharp wedge:
+Unlike Jira, Qeetro is not configuration-first. Unlike Linear, Qeetro is not only a product-development system for teams and agents. Unlike GitHub and GitLab, Qeetro is not confined to the code-hosting or DevSecOps suite. Unlike Notion, Qeetro is not a flexible document workspace. Unlike ClickUp, Monday, and Asana, Qeetro is not a generic work platform.
 
-> **AI-native software teams (10–500 engineers) who are currently on Linear or GitHub Projects and feel the limits of those tools as they grow — but who will not, under any circumstances, return to Jira.**
+Qeetro is built for software execution from the substrate up.
 
-This wedge is chosen because:
+## Category Frame
 
-1. These teams have **already paid the cognitive cost** of leaving Jira. They will not adopt anything that smells like Jira.
-2. They are **AI-fluent** and ready to trust AI in their workflow. Older buyers require years of education.
-3. They are **growing**, which means they will hit the limits of Linear's roadmapping, GitHub Projects' generality, and Notion's operational fragility within 12–18 months.
-4. They are **price-insensitive on tooling** at the seat-level when the value is real.
-5. They are **vocal in the developer community** — they write blog posts, give talks, and create the social proof that drives the next wave of adoption.
+Qeetro belongs to a new category: AI-Native Execution Systems.
 
-We win the wedge first. We expand from there.
+The old category was project management. It assumed that humans manually report state, configure workflows, and coordinate across tools.
 
-## The expansion path
+The new category assumes that AI can help reason over work, that state can be inferred from signals, that agents need governance, and that execution systems should reduce coordination tax instead of merely recording it.
 
-```
-Wedge:           AI-native scale-ups (10–500 eng) on Linear / GitHub Projects
-                                    │
-                                    ▼
-Expansion 1:    Mid-market product orgs (500–2,000 eng) frustrated with Jira
-                                    │
-                                    ▼
-Expansion 2:    Enterprise software orgs (2,000–10,000 eng) — Jira displacement deals
-                                    │
-                                    ▼
-Expansion 3:    Adjacent functions inside existing customers (PM, design, devrel, TPM)
-                                    │
-                                    ▼
-Expansion 4:    Global 2000 standardization — Qeetro as the execution substrate
-```
+## 2026 Positioning Correction
 
-Each step builds on the previous. We do not skip steps. We do not chase enterprise before earning bottom-up love. We do not chase adjacent functions before owning engineering.
+The market has caught up to the language of AI work. Linear now publicly positions around teams and agents. GitHub and GitLab both market agentic developer workflows. Notion, ClickUp, and Asana all describe AI teammates, agents, connected context, and workflow automation. Plane now positions around projects, knowledge, AI, agents, self-hosting, and developer extensibility.
 
-## Who Qeetro is for
+This changes the positioning problem.
 
-### Primary persona: The opinionated VP of Engineering / Head of Product
+Qeetro should not say, "we have AI and competitors do not." That is no longer true.
 
-- Has used Jira and rejected it
-- Currently on Linear or has rolled their own with GitHub Projects + Notion + Slack
-- Is feeling the seams as the org scales past 50–100 engineers
-- Believes AI will reshape software development and wants their tooling to reflect that
-- Cares deeply about engineering velocity, not vanity metrics
-- Is the economic buyer up to ~$500K ACV
+Qeetro should say, "software execution needs a governed, developer-first execution graph, not generic AI over a configurable work database."
 
-### Secondary persona: The pragmatic engineer
+The strategic frame is software execution depth, not AI presence.
 
-- Wants to spend their time writing code, not updating tickets
-- Lives in the terminal, the editor, and the PR
-- Trusts tools that respect their time
-- Will champion tools that make their life better and sandbag tools that don't
-- Has veto power even when they are not the buyer
+## Market Wedge
 
-### Tertiary persona: The AI-forward CTO
+The initial wedge is narrow by design:
 
-- Building an AI-native company
-- Knows that their org structure and tooling will need to support AI agents as collaborators within 2 years
-- Looking for forward-compatible infrastructure choices
-- Willing to bet on the right new entrant; will not bet on a 20-year-old incumbent
+AI-native software teams with 10 to 500 engineers that currently use Linear, GitHub or GitLab planning, Notion, Plane, or a lightweight Jira setup and are starting to feel cross-team coordination pain.
 
-## Who Qeetro is NOT for
+These teams have five important properties:
 
-We must be explicit about who we will not serve in the early years. Saying no is the source of focus.
+- They reject Jira-style complexity.
+- They value speed and developer experience.
+- They already use AI in engineering work.
+- They are scaling beyond single-team simplicity.
+- They need governed execution intelligence, not another disconnected AI assistant.
 
-- **Enterprise IT departments using Jira for ITSM.** Not our market. ServiceNow's territory.
-- **Large traditional IT shops with deep ITIL processes.** We will not build approval workflows, change advisory boards, or CAB tooling.
-- **Marketing, HR, legal, finance teams** using PM tools for their own work. Maybe one day, never first.
-- **Solopreneurs and freelancers.** Notion, Linear free tier, and a hundred others serve them adequately.
-- **Teams that want to recreate Jira.** If a prospect's first question is "can we configure custom workflows with 12 statuses, 8 issue types, and conditional transitions?" — they are not our customer. We will lose those deals on purpose.
-- **Government and defense buyers in the early years.** The compliance overhead distorts product priorities. We earn the right to serve them once the core product is mature.
+This wedge is where Qeetro can win love before it wins standardization.
 
-## Frame of reference: what category are we in?
+## Expansion Path
 
-This is the most important strategic question in positioning. The answer shapes pricing, packaging, sales motion, marketing, and how prospects mentally categorize us.
+Qeetro should expand in this order:
 
-We have three options:
+1. AI-native startups and scale-ups with engineering-led buying cultures.
+2. Mid-market software organizations frustrated by Jira and toolchain fragmentation.
+3. Enterprise software organizations that need AI governance and execution visibility.
+4. Adjacent technical functions inside existing customers: design, DevOps, QA, developer relations, technical support, solution engineering.
+5. Broader enterprise execution only after software execution is clearly owned.
 
-1. **"Better Linear"** — easy to communicate, but caps our ceiling.
-2. **"Modern Jira"** — large TAM, but pulls us toward configuration hell.
-3. **"AI-native execution system"** — a new category we create. Hardest to communicate, highest ceiling.
+Skipping this sequence creates product distortion. Qeetro should not chase large enterprise process depth before earning bottom-up daily adoption.
 
-**We choose option 3.** We pay the short-term cost of category creation in exchange for long-term defensibility. See [04-category-design.md](04-category-design.md).
+## Who Qeetro Is For
 
-In the meantime, we use the **"compared to" frame** in sales and marketing:
+Qeetro is for:
 
-- _"If you love Linear, Qeetro is what Linear becomes when it grows up with AI in its DNA."_
-- _"If you're stuck on Jira, Qeetro is what you wish Jira had become."_
-- _"If you've stitched together GitHub Projects + Notion + Slack, Qeetro is the system that makes that stack obsolete."_
+- Engineering teams that want a fast, low-friction execution system.
+- Product teams that need roadmap and delivery clarity without status theater.
+- Technical founders who want a system that scales from startup speed to enterprise governance.
+- AI-native companies preparing for agents as active collaborators.
+- Engineering managers who spend too much time translating scattered signals into updates.
+- Software organizations that need better coordination but refuse to accept Jira-style administration.
 
-## Differentiation summary
+## Who Qeetro Is Not For
 
-| Dimension                  | Jira      | Linear    | GitHub Projects       | Notion    | ClickUp/Monday | **Qeetro**                |
-| -------------------------- | --------- | --------- | --------------------- | --------- | -------------- | ------------------------- |
-| Speed                      | Slow      | Fast      | Fast                  | Slow      | Slow           | **Fastest**               |
-| Configuration burden       | Extreme   | Low       | Low                   | Medium    | Extreme        | **Near-zero**             |
-| AI integration             | Bolted-on | Bolted-on | Limited               | Bolted-on | Bolted-on      | **Native substrate**      |
-| State inference            | None      | Minimal   | Minimal               | None      | None           | **Core capability**       |
-| Agent-as-collaborator      | No        | No        | No                    | No        | No             | **First-class**           |
-| Developer experience       | Poor      | Good      | Excellent             | Poor      | Poor           | **Excellent**             |
-| Realtime collaboration     | Weak      | Strong    | Weak                  | Strong    | Weak           | **Strong**                |
-| Enterprise readiness       | Strong    | Growing   | Inherited from GitHub | Weak      | Medium         | **Built-in from day one** |
-| Coordination tax reduction | None      | Low       | Low                   | None      | None           | **Core value prop**       |
+Qeetro is not for:
 
-See [08-competitive-teardown.md](08-competitive-teardown.md) for the full analysis.
+- Teams that want to recreate Jira with unlimited workflow customization.
+- IT service management teams centered on ITIL, ticket queues, approvals, and change boards.
+- Marketing, HR, finance, or legal teams as primary early users.
+- Solopreneurs looking for a personal task manager.
+- Organizations hostile to AI in operating workflows.
+- Government or highly regulated defense buyers before the product and compliance posture are mature.
+- Customers whose main buying criterion is the lowest seat price.
 
-## Messaging architecture
+Saying no to these customers protects the product.
 
-### Headline
+## Competitive Position
 
-**Ship faster than the meetings about shipping.**
+### Against Jira
 
-### Subheading
+Qeetro wins on speed, simplicity, AI-native architecture, developer trust, and reduced configuration burden. Jira wins on existing enterprise footprint, ITSM depth, procurement familiarity, and marketplace maturity.
 
-The AI-native execution system for software teams. Qeetro infers the state of your work, eliminates status updates, and treats AI agents as first-class collaborators — so your team can spend its time building, not coordinating.
+Qeetro should not try to out-Jira Jira. It should make Jira feel like the old category.
 
-### Three pillars (used across the site, decks, sales)
+### Against Linear
 
-1. **Speed by default.** Sub-100ms everywhere. Five-minute onboarding. Zero configuration to start.
-2. **AI in the substrate.** Not a sidebar chatbot. AI knows your work, drafts your sprints, synthesizes your status, and routes your blockers — automatically.
-3. **Built for the next decade.** First-class AI agents. Realtime by design. API-first. Enterprise-ready from day one.
+Linear is the closest direct competitor for Qeetro's wedge. It is fast, opinionated, loved by engineers, and now publicly positioned around teams and agents.
 
-### Anti-positioning lines (used to repel the wrong customers)
+Qeetro must respect Linear and beat it on the parts that matter at scale: cross-tool execution graph depth, explicit agent governance, richer auditability, migration paths, enterprise-safe simplicity, and coordination intelligence across product, docs, code, customer context, and roadmap reality.
 
-- _"If your dream is a workflow with 14 statuses and conditional transitions, Qeetro is not for you."_
-- _"If you measure team success by ticket throughput, Qeetro will not help you."_
-- _"If you want a tool you can endlessly configure, buy Jira. We won't compete for that deal."_
+### Against GitHub And GitLab
 
-Anti-positioning is a feature. It earns the trust of the customers we want.
+GitHub owns developer identity, repositories, pull requests, Issues, Projects, Copilot, and agent-assisted coding. GitLab owns an integrated DevSecOps lifecycle with planning, code, security, CI/CD, value streams, and Duo Agent Platform.
 
-## Geographic positioning
+Qeetro should integrate deeply with both instead of pretending either can be displaced early. Qeetro wins where work spans product intent, docs, roadmap, customer feedback, design context, dependencies, planning, and governed execution beyond a single code platform.
 
-- **Year 0–2:** Win North America (specifically SF/NYC AI-native ecosystem) and Western Europe (London, Berlin, Amsterdam, Stockholm). High concentration of ICP. High social-proof leverage.
-- **Year 2–4:** Add APAC (Singapore, Tokyo, Sydney, Bangalore), Israel, and select Latin America (São Paulo).
-- **Year 4+:** Global enterprise distribution.
+### Against Notion
 
-We do not chase every geography early. Concentrated wins create category gravity.
+Notion wins flexible documentation, lightweight databases, enterprise search, and increasingly AI agents. Qeetro wins only if it is more opinionated and execution-specific. Docs in Qeetro exist to connect knowledge to shipping, not to become a general-purpose document workspace.
 
-## Pricing posture (positioning, not pricing strategy)
+### Against ClickUp, Monday, And Asana
 
-Qeetro is positioned as a **premium-but-justified** product. We are not the cheapest. We are not trying to be. Our positioning is:
+These platforms win generic work-management breadth and increasingly claim AI teammates, agents, connected context, and workflow automation. Qeetro wins by being narrower, faster, more technical, more semantically coherent, and more trusted by software teams.
 
-> _"Qeetro costs more per seat than Jira and roughly the same as Linear. The reason your CFO will still approve it is that it eliminates more headcount-equivalent coordination cost than its price tag."_
+### Against Plane
 
-The full pricing strategy is out of scope for the strategy directory. Positioning sets the frame.
+Plane is a serious watchlist competitor because it combines project management, wiki, AI, self-hosting, MCP, APIs, marketplace, importers, and developer-friendly positioning.
+
+Qeetro should not chase Plane feature-for-feature. It should beat Plane through sharper software-execution semantics, better hosted experience, stronger category narrative, deeper AI evaluation, and enterprise-safe simplicity. Qeetro should still preserve an architecture that can support dedicated cloud, sovereign cloud, or self-hosted deployment later.
+
+## Messaging Architecture
+
+### Primary Message
+
+Ship faster than the meetings about shipping.
+
+### Supporting Message
+
+Qeetro connects issues, roadmaps, docs, code signals, realtime collaboration, and AI agents into one execution system for software teams.
+
+### Proof Pillars
+
+1. Fast by default: low-latency, keyboard-friendly workflows for daily execution.
+2. Software execution graph: issues, docs, code signals, roadmap intent, decisions, dependencies, and agents connected in one model.
+3. AI in the workflow: summaries, search, planning, triage, risk detection, and state explanations where work happens.
+4. Developer-first: API, CLI, SDKs, webhooks, Git integrations, MCP-aware surfaces, and clean automation primitives.
+5. Governed agents: AI collaborators with identity, permissions, audit, approval boundaries, and accountability.
+6. Enterprise-ready substrate: RBAC, tenant isolation, audit, SSO, and observability without admin-heavy UX.
+
+## Anti-Positioning
+
+Qeetro should actively repel the wrong market with clear language:
+
+- If you want infinite custom fields and workflow states, Qeetro is not your product.
+- If your team enjoys status meetings, Qeetro will feel opinionated.
+- If you want a generic work OS, use a generic work OS.
+- If AI is only a novelty for you, Qeetro will be early.
+
+Anti-positioning earns trust from the customers Qeetro actually wants.
+
+## Strategic Positioning Rule
+
+Qeetro should never position as merely a replacement for an incumbent. Replacement language can be useful in sales, but the company narrative must point to the new category.
+
+The strategic frame is not "better Jira." It is "the execution substrate for AI-native software teams."

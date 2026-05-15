@@ -1,115 +1,139 @@
 # Mission
 
-> **Qeetro's mission is to make software organizations execute at the speed of their best ideas — by replacing the configuration-driven, coordination-heavy work substrate of the past with an AI-native execution system that infers state, eliminates coordination tax, and treats human and AI collaborators as peers.**
+Qeetro's mission is to reduce coordination overhead for software teams while improving execution clarity, planning quality, collaboration, and delivery confidence.
 
-## Decomposition of the mission
+The mission is practical. It is not to make teams "use AI." It is not to create the largest feature surface in project management. It is to make execution faster, clearer, and less manually coordinated.
 
-Every clause in the mission statement is load-bearing. This document explains why.
+## Mission Statement
 
-### "Software organizations"
+Qeetro helps software organizations execute faster by replacing manual status coordination, fragmented context, and configuration-heavy workflows with an AI-native execution system that understands work, explains state, and supports human and AI collaborators under clear governance.
 
-We are not building for marketing teams. We are not building for HR. We are not building a "universal work platform."
+## What The Mission Means
 
-We are building for the organizations where **software is the product or the dominant cost center**:
+### Software Organizations
 
-- Product engineering teams (the core)
-- Platform/infrastructure teams
-- Design teams embedded with engineering
-- Product management
-- Developer relations
-- Technical program management
-- Engineering operations
-- AI/ML teams
-- Eventually: adjacent functions whose work is gated by software delivery (revenue ops, sales engineering, support engineering)
+Qeetro is for teams where software creation is central to company value.
 
-This focus is the source of our quality. Generic work tools serve everyone poorly. Qeetro will serve software organizations exceptionally.
+Primary users include:
 
-### "Execute at the speed of their best ideas"
+- Software engineers
+- Product managers
+- Engineering managers
+- Technical founders
+- Platform and DevOps teams
+- QA and reliability teams
+- Design and research partners embedded with product engineering
+- AI-native software companies
 
-The gap between _thinking of the right thing to do_ and _the right thing being done_ is, in most organizations, weeks or months. The gap is filled with:
+Qeetro may eventually serve adjacent functions, but engineering-led execution is the starting point and the quality bar.
 
-- Tickets being created, refined, and re-refined
-- Estimation rituals
-- Sprint planning negotiations
-- Dependency mapping in spreadsheets
-- Status synthesis for stakeholders
-- Roadmap reconciliation between teams
-- Cross-tool context-switching
+### Execute Faster
 
-None of this is the work. All of it is the **tax on the work**. Qeetro's mission is to drive that tax toward zero.
+Execution speed does not mean rushing. It means reducing the delay between understanding the right work and getting it shipped.
 
-### "Replacing the configuration-driven, coordination-heavy work substrate of the past"
+Qeetro should reduce:
 
-We are not improving the existing category. We are replacing it.
+- Time spent creating and refining obvious tickets.
+- Time spent finding context.
+- Time spent manually updating status.
+- Time spent reconciling roadmap, sprint, docs, and code reality.
+- Time spent routing blockers and decisions.
+- Time spent explaining progress to stakeholders.
 
-- **Configuration-driven** is the disease of Jira, ClickUp, and Monday. The product gives you a thousand levers and asks you to figure out the right combination. Qeetro chooses for you and earns the right to be wrong.
-- **Coordination-heavy** is the disease of every existing tool. They all assume that humans will do the work of keeping the system in sync with reality. Qeetro inverts this.
+### AI-Native Execution System
 
-### "AI-native execution system"
+AI-native means the system is designed so AI can reason over work safely and usefully.
 
-The category. See [04-category-design.md](04-category-design.md).
+It requires:
 
-"AI-native" is not a marketing claim. It is an architectural commitment. It means:
+- A coherent work graph.
+- Explicit domain semantics.
+- Tenant-safe retrieval.
+- Agent identity and scoped permissions.
+- Versioned prompts and evaluation.
+- Audit trails for AI-generated or AI-assisted actions.
+- Human approval for high-impact actions.
 
-- The data model is designed for AI consumption from day one.
-- AI agents have first-class identity, permissions, and audit.
-- Every surface has AI capabilities, not just a chatbot in the corner.
-- The system is designed to be operated _by_ AI, not just to be used _with_ AI.
+AI-native does not mean every screen has a chatbot. It means intelligence is embedded where it reduces work.
 
-"Execution system" is the deliberate replacement for "project management tool." We are not managing projects. We are executing work.
+### Understands Work
 
-### "Infers state"
+Qeetro should connect planning intent to execution signals. Issues, projects, sprints, roadmaps, comments, docs, pull requests, deployments, incidents, and customer signals should form a coherent picture.
 
-The single most important architectural commitment. Qeetro must know the state of the work without humans having to tell it. This is achieved through:
+Understanding work means the system can answer:
 
-- Deep, two-way integration with the systems where work actually happens (Git, CI/CD, design tools, customer systems).
-- Event-driven architecture that captures every signal.
-- AI synthesis that turns raw signals into structured state.
-- Continuous reconciliation between intent (what the team said they would do) and reality (what is actually happening).
+- What is planned?
+- What is actually happening?
+- What changed?
+- Who owns it?
+- What is blocked?
+- What is at risk?
+- What evidence supports the answer?
 
-### "Eliminates coordination tax"
+### Explains State
 
-The measurable outcome. We will instrument and report on:
+Trust comes from explainability. If Qeetro recommends an action, flags a risk, updates a summary, or lets an agent act, users need to understand the basis of that behavior.
 
-- Time spent in status meetings (target: ~zero)
-- Time spent writing status updates (target: ~zero)
-- Time-to-decision on blocked work (target: minutes, not days)
-- Cross-team handoff latency (target: hours, not weeks)
+An execution system that cannot explain itself becomes a black box. A black box will not earn enterprise trust or developer love.
 
-These are the numbers that matter. Feature counts and customization options are not.
+## Mission Metrics
 
-### "Treats human and AI collaborators as peers"
+The mission should be measurable through product and business outcomes.
 
-The most forward-looking commitment. By 2028, every serious software organization will have AI agents performing meaningful work. Those agents need:
+Core product metrics:
 
-- Identity (who is this agent? who deployed it? who is accountable for it?)
-- Permissions (what can it read? what can it modify? what requires human approval?)
-- Audit (what did it do? when? why? on whose behalf?)
-- Accountability (when it makes a mistake, what is the remediation path?)
+- Time to first value under 5 minutes for the primary onboarding path.
+- Core interaction latency under 100ms where technically feasible.
+- Reduction in manual status update frequency.
+- Reduction in time spent searching for project context.
+- Issue and project state freshness without manual updates.
+- AI suggestion accept, edit, and reject rates.
+- Sprint and roadmap predictability improvements.
+- Developer activation and weekly retention.
 
-No existing PM tool can represent agents as first-class entities. Qeetro will be the first that can.
+Business metrics:
 
-## Mission as decision filter
+- Adoption by engineering-led teams.
+- Expansion from one team to many teams inside a workspace.
+- Net revenue retention.
+- Public customer advocacy from technical leaders.
+- Competitive win rate against Linear, Jira, and GitHub Projects in the wedge segment.
 
-Every roadmap item, every hire, every partnership, every line of marketing copy must pass the mission test:
+Operational metrics:
 
-> _Does this make software organizations execute at the speed of their best ideas?_
+- API latency and reliability.
+- Realtime sync latency.
+- Background job success rate.
+- Search freshness.
+- AI provider latency, cost, and failure rate.
+- Tenant isolation and authorization defects.
 
-If the answer is "no" or "not directly" or "eventually" or "it's a strategic option" — the answer is no.
+## What The Mission Excludes
 
-## What the mission excludes
+The mission excludes work that would dilute focus before Qeetro earns the right to expand.
 
-The mission, by design, excludes:
+Not primary markets in the early stages:
 
-- **Generic work management.** We will not build for legal, HR, or marketing as primary users.
-- **ITSM.** We will not chase ServiceNow or the IT ticketing market.
-- **Personal productivity.** We are not a todo app. We are not Things, OmniFocus, or Todoist.
-- **Pure documentation.** We will have docs as a primitive but we will not compete with Notion as a knowledge base.
-- **Pure communication.** We will integrate with Slack and Teams. We will not replace them.
-- **CRM, finance, HRIS.** Adjacent systems we integrate with. Not systems we build.
+- Generic work management for every department.
+- IT service management and ITIL workflows.
+- Personal productivity and solo task tracking.
+- Marketing campaign management as a first-class market.
+- HR, finance, legal, and procurement workflow suites.
+- Time tracking and agency billing as core product identity.
+- Pure docs/wiki competition with Notion or Confluence.
+- Pure chat or video collaboration.
 
-This exclusion list is as important as the inclusion list. **Focus is the source of quality.**
+Qeetro can integrate with many of these systems. It should not become them.
 
-## How the mission evolves
+## Mission Decision Test
 
-The mission statement should change rarely — perhaps once in the company's first decade. The decomposition above can evolve as the market matures. If we ever feel pressure to broaden the mission to chase a market, we should treat that pressure as a warning sign, not an opportunity.
+Every major feature, partnership, architecture choice, and go-to-market shift should answer yes to at least one of these questions:
+
+- Does this reduce coordination overhead?
+- Does this improve execution clarity?
+- Does this help teams plan or ship with less friction?
+- Does this make AI safer, more useful, or more embedded in execution?
+- Does this strengthen the developer-first wedge?
+- Does this compound the long-term execution substrate?
+
+If the answer is no, the work should be delayed, simplified, or rejected.

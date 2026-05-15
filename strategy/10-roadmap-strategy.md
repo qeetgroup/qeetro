@@ -1,236 +1,297 @@
 # Roadmap Strategy
 
-> **The roadmap is not a list of features. It is the sequencing of strategic bets.**
+The roadmap is not a feature list. It is the sequencing of strategic bets.
 
-This document defines _how_ we sequence what we build, not _what_ the next sprint contains. The tactical roadmap lives elsewhere; the strategic logic lives here.
+Qeetro must build in an order that preserves speed, clarity, AI-native differentiation, developer trust, and enterprise readiness without becoming broad or heavy too early.
 
-## The sequencing principle
+## Roadmap Philosophy
 
-Every meaningful product investment falls into one of three categories:
+Qeetro should sequence work across three investment categories:
 
-| Category      | Purpose                                                                                                                                           | % of capacity |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| **Substrate** | Architectural foundations that compound across all future product (data model, event spine, agent platform, context graph, performance, security) | ~40%          |
-| **Wedge**     | Capabilities that win our current ICP today                                                                                                       | ~40%          |
-| **Frontier**  | Bets on where the category is going (agent marketplace, autonomous coordination, novel surfaces)                                                  | ~20%          |
+| Category  | Purpose                                                                                                                  | Early Allocation   |
+| --------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------ |
+| Substrate | Foundations that compound: data model, auth, tenant isolation, event spine, APIs, realtime, observability, AI governance | High               |
+| Wedge     | Capabilities that win the initial ICP: issues, projects, sprints, Git integration, summaries, search, lightweight docs   | High               |
+| Frontier  | Long-term differentiation: agents, marketplace, predictive execution, autonomous coordination                            | Low but deliberate |
 
-The percentages shift over time:
+The mistake is to overfund frontier before the wedge is loved or to overfund features before the substrate can support them.
 
-- **Year 1:** 60% substrate, 35% wedge, 5% frontier (we earn the right to exist).
-- **Year 2:** 40% substrate, 40% wedge, 20% frontier.
-- **Year 3:** 30% substrate, 40% wedge, 30% frontier (frontier becomes wedge).
-- **Year 5+:** 25% substrate, 35% wedge, 40% frontier (we are the category).
+## 2026 Research Adjustment
 
-## Year 1: Earn the right to exist
+Public competitor research changes the sequencing pressure. Agents, connected AI context, enterprise search, AI teammates, and workflow automation are now visible across Linear, GitHub, GitLab, Notion, ClickUp, Asana, Plane, and Motion.
 
-### Strategic objective
+Qeetro should not respond by building a broad agent marketplace early. That would be premature.
 
-Become the obvious choice for AI-native software teams of 50–200 engineers currently on Linear or GitHub Projects. Achieve undeniable speed-of-execution, AI-native depth, and operational reliability.
+It should respond by moving trust primitives earlier:
 
-### Substrate priorities (Year 1)
+- AI action logs.
+- Permission-aware retrieval.
+- Source-backed AI outputs.
+- Agent identity placeholders.
+- Basic approval boundaries.
+- Explicit data-use controls.
+- Evaluation fixtures for core AI workflows.
 
-1. **Core data model.** AI-native, semantically typed, event-sourced from day one. The most important architectural decisions of the company are made here. Re-platforming this later is impossible.
-2. **Event spine.** Every state change emits structured events. Replayable, queryable, consumable by AI and integrations.
-3. **Realtime collaboration substrate.** CRDT-based or equivalent. Presence, shared cursors, conflict-free editing as primitives.
-4. **API / CLI / SDK / webhook surface.** Comprehensive from launch. Same APIs internally as externally.
-5. **Authentication, authorization, audit.** SSO, SCIM, RBAC, complete audit logs. Built in, not added.
-6. **Performance budget enforcement.** CI gates on latency. Cultural commitment to sub-100ms.
-7. **Observability platform.** For us internally and for customers. Customers can introspect their own usage.
-8. **Foundational integrations.** GitHub (deep), GitLab, Slack, Linear (import), Jira (import), Figma, Notion (read), Google Calendar.
+The marketplace can wait. The governance substrate cannot.
 
-### Wedge priorities (Year 1)
+## Phase 0: Seed And Planning State
 
-1. **Issue tracking that beats Linear on speed and parity on UX.**
-2. **Sprints / cycles with intelligent defaults.**
-3. **Roadmaps and initiatives that solve Linear's scaling ceiling.**
-4. **Docs as a first-class primitive (lightweight Notion replacement for execution-adjacent docs).**
-5. **Inline AI: drafting, summarization, classification, search.**
-6. **Realtime status synthesis for managers (no more weekly status meetings).**
-7. **Onboarding under 5 minutes to first value.**
-8. **Migration tools from Linear, Jira, GitHub Projects.**
+### Objective
 
-### Frontier priorities (Year 1)
+Create strategic clarity and implementation discipline before writing application code.
 
-1. **First-class AI agent identity model** (architectural; no marketplace yet).
-2. **Two first-party agents** in beta: a "scribe" (notes, summaries, status) and a "planner" (sprint composition recommendations).
-3. **Open standards work** on agent identity and execution semantics (positioning for category authorship).
+### Required Outcomes
 
-### Year 1 success criteria
+- Strategy directory exists and is internally consistent.
+- `.claude/context/` stays aligned with strategy.
+- Tech stack decisions are explicit and phase-aware.
+- MVP scope is written before implementation.
+- Architecture starts modular and simple.
 
-- 100+ paying customers in the wedge ICP.
-- $5M+ ARR.
-- Net retention >130%.
-- p95 latency <100ms on core interactions.
-- Time-to-first-value <5 minutes (95th percentile).
-- 3+ named lighthouse customers willing to publicly evangelize.
-- Analyst awareness (briefings booked with Forrester, Gartner equivalents).
-- Founding category narrative published and circulating in industry conversations.
+### Decisions To Make Before Code
 
-### What we explicitly will not build in Year 1
+- Package manager.
+- Monorepo tool or simple workspace approach.
+- Backend framework.
+- ORM or query layer.
+- Auth approach.
+- Realtime foundation.
+- Search foundation.
+- AI provider abstraction.
+- Local development model.
 
-- Cross-functional surfaces beyond engineering/product/design.
-- Native chat/messaging (Slack/Teams integration is the answer).
-- Custom workflow engines or workflow builders.
-- Time tracking (we are not a billable-hours product).
-- OKR-shaped goals product (post-Year 1).
+## Phase 1: MVP Core Execution
+
+### Objective
+
+Earn daily use from engineering-led software teams.
+
+### Build
+
+- Organization, workspace, team, and member model.
+- Authentication and basic RBAC.
+- Projects.
+- Issues with status, priority, assignee, labels, comments, and history.
+- Fast issue create, edit, search, and list/board views.
+- Basic backlog and sprint/cycle model.
+- GitHub integration for PR and commit links.
+- Basic notifications and mentions.
+- Lightweight docs tied to projects or issues.
+- AI-assisted issue drafting, summarization, and workspace search.
+- Permission-aware AI retrieval and source-backed AI answers.
+- AI action log for summaries, suggestions, and generated changes.
+- Agent identity placeholders for first-party and external AI actors.
+- Basic AI enable, disable, and approval controls.
+- Audit foundations for sensitive actions.
+- Observability for core paths.
+- Import path from Linear, GitHub Issues, or CSV.
+
+### Do Not Build Yet
+
+- Full custom workflow builder.
+- Marketplace.
+- Complex automation editor.
+- Deep analytics suite.
+- Native chat.
 - Whiteboards.
-- Native video.
-- Mobile apps beyond a competent companion (full-featured mobile is Year 2).
-- Enterprise compliance certifications beyond SOC2 Type 2 (more come in Year 2).
-- Self-hosted offering (we evaluate in Year 2 based on demand).
-- Asia-Pacific data residency (Year 2).
-- A public agent marketplace (Year 2 beta).
+- Broad OKR product.
+- Complex enterprise policy builder.
+- Multi-region infrastructure.
+- Public agent marketplace.
+- Fully autonomous agents that modify meaningful work without approval.
+- Full mobile app beyond essential companion workflows.
 
-## Year 2: Define the category
+### Success Criteria
 
-### Strategic objective
+- A team can create a workspace and reach value in under 5 minutes.
+- Daily issue workflows feel fast.
+- Engineers do not feel administrative burden.
+- AI saves time in a visible first-week workflow.
+- GitHub integration makes work state more trustworthy.
+- Teams can migrate small projects without heavy services.
 
-Establish "AI-Native Execution Systems" as a recognized category and Qeetro as its defining instance. Move upmarket without losing the bottom-up DNA.
+## Phase 2: Multi-Team Coordination
 
-### Substrate priorities (Year 2)
+### Objective
 
-1. **Context graph enrichment.** Deeper extraction, broader integration, better embeddings.
-2. **Agent runtime maturity.** Production-grade orchestration, permissions, audit.
-3. **Multi-region infrastructure.** EU residency, beginning APAC presence.
-4. **Enterprise security hardening.** SOC2 Type 2, ISO 27001, GDPR, customer-managed keys.
-5. **Performance at scale.** Validated at 10,000-seat workspaces.
+Solve the scaling pain that appears when teams outgrow simple issue tracking.
 
-### Wedge priorities (Year 2)
+### Build
 
-1. **Coordination automation features** (auto-routing, blocker detection, status synthesis at executive level).
-2. **Portfolio / multi-team roadmapping** for the 200–1000 engineer tier.
-3. **Customer signal integration** (deep CRM, support, customer-systems integrations to feed the context graph).
-4. **Mobile.**
-5. **Advanced reporting and analytics.**
-6. **Migration tooling for Jira at meaningful scale** (the upmarket wedge).
+- Multi-team project views.
+- Dependencies and blockers.
+- Roadmap items and initiatives.
+- Sprint planning improvements.
+- Release planning basics.
+- Better activity streams.
+- Realtime board and issue updates.
+- Slack integration.
+- Improved docs and decision capture.
+- AI status synthesis.
+- AI blocker and risk detection.
+- Role and permission refinement.
 
-### Frontier priorities (Year 2)
+### Success Criteria
 
-1. **Agent marketplace beta.** First third-party agents deployed in customer workspaces.
-2. **Open agent identity standard** published.
-3. **Autonomous capabilities expansion** (agents act with greater scope, under increasingly sophisticated guardrails).
-4. **First "predictive" features** (release risk, sprint risk, dependency risk).
+- Engineering managers reduce manual reporting work.
+- Cross-team dependencies are visible earlier.
+- Product managers trust roadmap state more.
+- Multi-team adoption grows from initial team wedges.
 
-### Year 2 success criteria
+## Phase 3: Automation And Integrations
 
-- 500+ customers; 5+ in the >1,000-seat tier.
-- $25M+ ARR.
-- Analyst category recognition (Forrester wave or equivalent positioning).
-- Marketplace with 25+ third-party agents/integrations.
-- Public reference customers in 3+ verticals.
-- Net retention >135%.
+### Objective
 
-## Year 3: Become the obvious choice for ambitious orgs
+Turn Qeetro into the execution hub connected to the surrounding software toolchain.
 
-### Strategic objective
+### Build
 
-Win the majority of net-new AI-native software organization deals. Establish meaningful enterprise footprint. Marketplace becomes a flywheel.
+- Webhooks and public API maturity.
+- GitLab integration.
+- Deeper GitHub integration.
+- Slack and Discord notification routing.
+- Integration connection management.
+- Practical automation rules with opinionated templates.
+- Scheduled summaries.
+- Import and export maturity.
+- Search indexing improvements.
+- Event-driven background workflows.
 
-### Substrate priorities
+### Guardrail
 
-- Multi-region, multi-cloud architecture maturity.
-- Per-tenant fine-tuning infrastructure for AI capabilities.
-- FedRAMP and regulated-industry readiness.
-- Self-hosted / sovereign-cloud offering.
+Automation must not become Jira workflow configuration under a new name. Prefer common templates and clear explanations over arbitrary rule complexity.
 
-### Wedge priorities
+## Phase 4: AI Execution Intelligence
 
-- Cross-functional expansion (devrel, TPM, support engineering, sales engineering as first-class).
-- Customer-context integrations (closing the loop with revenue, support, product analytics).
-- Advanced governance for enterprise (data classification, retention policies, agent governance frameworks).
+### Objective
 
-### Frontier priorities
+Move from AI assistance to governed execution intelligence.
 
-- Agent marketplace at scale (thousands of agents).
-- Cross-organization agent collaboration patterns.
-- "Continuous coordination" — the substrate proactively reconciles intent and execution.
+### Build
 
-### Year 3 success criteria
+- Versioned prompt registry.
+- AI task queue.
+- Retrieval service with tenant scoping.
+- AI evaluation harness.
+- AI audit trail.
+- Planning assistant.
+- Triage assistant.
+- Release and sprint summary assistant.
+- Dependency intelligence.
+- Advanced agent approval workflows and policy controls.
+- Early first-party agents under conservative scopes.
 
-- 2,000+ customers; meaningful enterprise wins.
-- $75M+ ARR.
-- Analyst recognition as category leader.
-- Marketplace generating measurable third-party revenue and customer value.
-- AI features driving measurable, customer-attested coordination-tax reduction (target: 30% reduction in status-meeting time, attested by ≥50% of customers).
+### Success Criteria
 
-## Year 4–5: Become the substrate
+- AI outputs are trusted and traceable.
+- Users can inspect why AI made a recommendation.
+- Security and admin users can govern AI behavior.
+- AI reduces coordination work measurably.
 
-### Strategic objective
+## Phase 5: Enterprise Readiness And Platform Expansion
 
-Be the default execution substrate for AI-native software organizations. Cross the threshold where Qeetro is on every relevant evaluation, and the burden of proof is on alternatives.
+### Objective
 
-### Bets
+Support large software organizations without corrupting the user experience.
 
-- Adjacent function expansion (devops, customer success engineering, technical sales).
-- Industry-specific configurations (regulated industries, public sector, defense).
-- The agent marketplace becomes a meaningful business in its own right.
-- International expansion at full scale.
+### Build
 
-### Year 5 outcomes
+- Advanced RBAC.
+- SSO and SCIM.
+- Audit log exploration and export.
+- Data retention controls.
+- Compliance reporting.
+- Enterprise analytics.
+- Migration tooling for Jira at scale.
+- Feature flags and release controls.
+- Regional data strategy where justified.
+- Marketplace foundations for integrations and agents.
 
-- $250M–$500M ARR.
-- Category-defining position with no credible challenger of equal depth.
-- Marketplace ecosystem of 10,000+ integrations and agents.
-- Ready for IPO or principled long-duration private growth.
+### Guardrail
 
-## Sequencing principles
+Enterprise features should live in admin and policy layers. They should not make everyday engineering workflows feel heavier.
 
-These principles govern _how_ the roadmap is built and re-built each quarter.
+## Sequencing Rules
 
-### 1. Substrate first within a horizon
+### 1. Wedge Before Platform
 
-Within any horizon, foundational architecture work precedes capabilities that depend on it. We do not build agent features before the agent platform exists. We do not build coordination automation before the event spine is mature.
+Qeetro must be loved by the first target users before becoming a platform. Platform work that does not improve the wedge or substrate should wait.
 
-### 2. Wedge before adjacency
+### 2. Substrate Before Autonomy
 
-We win our current ICP completely before we expand. The temptation to chase adjacent markets is constant; the cost of premature expansion is the failure mode of growth-stage companies.
+Do not ship broad agent autonomy before identity, permissions, audit, evaluation, and tenant-safe retrieval are in place.
 
-### 3. Frontier bets are time-boxed and funded discretely
+### 3. Integrations Before Inference
 
-Frontier work has its own dedicated capacity. It does not steal from substrate or wedge work. It does not get backlog-merged with feature requests. Its output is evaluated on category-creation impact, not on quarterly ARR.
+State inference depends on signals. Build deep GitHub and collaboration integrations before claiming broad execution intelligence.
 
-### 4. Performance and reliability are funded as substrate, not as overhead
+### 4. Templates Before Builders
 
-Performance work is not "engineering excellence time." It is product investment, with quantified outcomes (latency reduction, regression elimination, reliability target attainment).
+When customers ask for customization, first determine whether an opinionated template solves the problem. Builders come later and must be constrained.
 
-### 5. Migration tooling is a wedge investment, not a side project
+### 5. Observability Before Scale
 
-Every meaningful displacement (from Linear, from Jira, from GitHub Projects, from Notion) requires investment in migration tools, parity coverage, and switch-over UX. We treat these as first-class wedge capabilities.
+Production-critical workflows require logs, metrics, traces, and operational dashboards before they are scaled.
 
-### 6. Compliance and enterprise readiness are sequenced ahead of demand
+### 6. Migration Is Product
 
-We earn enterprise certifications before the deals require them, not after. SOC2 Type 2 in Year 1, ISO 27001 in Year 2, FedRAMP-readiness in Year 3+. The certification is a sales accelerator and a competitive moat.
+Migration from Linear, Jira, GitHub Projects, and Notion is not an afterthought. It is part of winning the market.
 
-### 7. Integration depth, not breadth
+### 7. AI Must Be Evaluable
 
-We invest deeply in fewer integrations (GitHub, Slack, Figma, Linear, Jira) before we invest in more. Depth wins the context graph; breadth fragments engineering effort.
+No meaningful AI workflow ships without evaluation, fallback behavior, and quality monitoring.
 
-### 8. AI capabilities ship in evaluable form
+## MVP Contract
 
-No AI capability ships without an evaluation suite, a quality dashboard, and a regression gate. AI quality is measured continuously, like any other system.
+The MVP is not "small Jira." It is the smallest coherent AI-native execution loop:
 
-### 9. We say no often
+1. Create workspace.
+2. Create project.
+3. Capture issues and context.
+4. Connect work to GitHub signals.
+5. Plan a sprint or cycle.
+6. Collaborate through comments and lightweight docs.
+7. Search and summarize with AI.
+8. Explain progress and blockers.
 
-The ratio of features requested to features shipped is large and intentional. Every "no" protects the principle that "configuration is failure." Every "yes" must strengthen a moat.
+Everything outside this loop must justify itself.
 
-### 10. The roadmap is not a promise
+## Roadmap Governance
 
-The roadmap is a current best understanding. Customers know that priorities adjust. We commit to outcomes (the category position, the customer success criteria), not to feature-level dates.
+Roadmap reviews should ask:
 
-## How the roadmap is governed
+- Which ICP pain does this solve?
+- Which product principle does this strengthen?
+- Which moat does this compound?
+- Which phase does this belong to?
+- What complexity does this introduce?
+- What do we delay by saying yes?
+- How will we know it worked?
 
-- **Quarterly:** Founder + heads of product/engineering set the next quarter's substrate/wedge/frontier allocation.
-- **Monthly:** Heads of product approve major roadmap shifts.
-- **Weekly:** Product engineering teams own sprint-level decisions within approved guardrails.
-- **Continuously:** Customer feedback, competitive intelligence, and AI-evaluation results inform priority shifts.
+## Strategic Risk Register
 
-The strategic priorities in this document are reviewed each quarter and amended through a written proposal process. Material shifts to the multi-year sequencing require founder approval.
+### Risk: Becoming A Broad PM Suite Too Early
 
-## What success of the roadmap looks like
+Response: Keep the wedge narrow and measure adoption quality before expansion.
 
-- We ship less than our competitors and win the category.
-- Each quarter's work compounds with the prior. No throwaway sprints. No reactive feature pile-on.
-- Every customer-facing feature traces back to a documented strategic objective.
-- Five years from now, looking back at this document, the major bets are recognizable in the product we shipped.
+### Risk: Overbuilding Infrastructure Before Product Pull
 
-The roadmap is the most important artifact of strategy execution. Treat it accordingly.
+Response: Start with modular architecture, not premature distributed systems.
+
+### Risk: Shipping AI That Users Do Not Trust
+
+Response: Ground outputs, evaluate quality, expose evidence, and keep approval boundaries conservative.
+
+### Risk: Enterprise Requirements Distorting UX
+
+Response: Build governance under the product, not in the user's way.
+
+### Risk: Copying Competitor Checklists
+
+Response: Tie roadmap items to principles, ICP pain, and moats, not feature parity.
+
+## Roadmap North Star
+
+Each phase should make Qeetro more capable without making it feel heavier.
+
+If the product becomes slower, more configurable, more generic, or more administrative as it grows, the roadmap has failed.

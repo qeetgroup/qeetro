@@ -4,6 +4,8 @@
 
 This folder contains Qeetro-specific context, reusable prompts, workflows, and agent role definitions for Claude-assisted product and engineering work.
 
+The **strategic** source-of-truth lives in [strategy/](../strategy/README.md). Files in `.claude/` are the **operational** layer that turns that strategy into repeatable execution. If `.claude/` and `strategy/` disagree, `strategy/` wins.
+
 ## Folder Structure
 
 ```text
@@ -27,10 +29,11 @@ When files disagree, prefer this order:
 
 1. Repository implementation
 2. Explicit user instruction
-3. `.claude/context/`
-4. `.claude/workflows/`
-5. `.claude/prompts/`
-6. `.claude/agents/`
+3. `strategy/` (Manifesto, Vision, Positioning, Product Principles, AI Philosophy)
+4. `.claude/context/`
+5. `.claude/workflows/`
+6. `.claude/prompts/`
+7. `.claude/agents/`
 
 ## Important Note
 

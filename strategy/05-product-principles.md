@@ -1,172 +1,198 @@
 # Product Principles
 
-These are the operating laws of Qeetro. They override personal opinion, customer requests, competitive pressure, and analyst feedback. When in conflict, principles win.
+These are the operating laws of Qeetro. They guide roadmap choices, UX decisions, architecture tradeoffs, AI behavior, enterprise scope, and customer requests.
 
-Every PR, design review, roadmap meeting, and hiring decision is governed by these principles.
+When principles conflict with feature pressure, principles win.
 
----
+## Tier 1: Non-Negotiables
 
-## Tier 1: Inviolable principles
+### 1. Speed Is Correctness
 
-These principles are never traded against. If a feature, decision, or strategy violates one, it is rejected — regardless of the apparent business case.
+Core interactions should feel instant. Speed is not polish added after functionality. It is part of correctness for an execution system.
 
-### 1. Speed is correctness.
+Default targets:
 
-Any core interaction over 100ms is a bug. Page loads over 500ms are a bug. Sync latency over 200ms is a bug. Speed is not a tier-2 quality attribute; it is a definition of correctness. We measure it. We regress-test it. We do not ship features that degrade it.
+- Sub-100ms perceived latency for common interactions where feasible.
+- Sub-5-minute time to first value for onboarding.
+- Fast keyboard navigation.
+- Fast issue create, edit, assign, filter, search, and board interactions.
+- Realtime updates that feel live without making state unreliable.
 
-### 2. Configuration is failure.
+If a feature makes the product meaningfully slower, it must justify itself at the highest level.
 
-Every configuration option exposed to the user is an admission that we did not understand the problem well enough to choose. We reach for opinionated defaults first, configurability last. The bar for adding a customer-facing setting is high and rising over time, not lowering.
+### 2. Configuration Is Failure Until Proven Otherwise
 
-### 3. The system must explain itself.
+Configuration is sometimes necessary, but it is costly. Every setting adds cognitive load, support burden, documentation surface, testing matrix, and AI semantic ambiguity.
 
-Any state in Qeetro must be explainable. "Why is this issue assigned to me?" "Why is this sprint at risk?" "Why did the agent close this ticket?" — every such question has a structured, accurate answer surfaced in-product. No black-box automations.
+Default stance:
 
-### 4. AI must reduce work, not produce it.
+- Choose opinionated defaults.
+- Add configuration only when a repeated, strategic customer need is proven.
+- Prefer workflow presets over blank-canvas builders.
+- Prefer platform-level categories over fully arbitrary semantics.
 
-An AI feature that creates more reviewing, prompting, or correcting than the work it replaces is a regression. We ship AI that quietly removes coordination tax. We do not ship AI that demos well and operates poorly.
+### 3. AI Must Reduce Work, Not Produce It
 
-### 5. Developers come first.
+AI features should remove repetitive coordination or improve decisions. They should not require users to babysit unreliable output.
 
-If a capability is not available via API, CLI, SDK, or webhook, it is not finished. Developer-facing surfaces ship at the same time as the UI, not after. Internal teams use the same APIs as customers.
+Every AI feature must answer:
 
-### 6. Realtime is a primitive.
+- What manual work does this reduce?
+- What evidence grounds the output?
+- What happens when the model is uncertain?
+- What is the approval boundary?
+- How will quality be evaluated?
 
-Presence, shared cursors, conflict-free editing, live state propagation — these are infrastructure, not premium tier features. Anything stateful in Qeetro is multiplayer by default.
+### 4. The System Explains Itself
 
-### 7. Enterprise readiness is built in from day one.
+Users must be able to understand why important states, suggestions, and actions exist.
 
-SSO, SCIM, RBAC, audit logs, encryption, data residency, and observability are properties of the substrate, not features we add when we go upmarket. Ship the small-team experience on the enterprise-grade substrate.
+Examples:
 
-### 8. We design for the next decade, not the last one.
+- Why is this sprint at risk?
+- Why was this issue routed to this person?
+- Why did this agent recommend a scope change?
+- Why did an automation run?
+- Which signals support this summary?
 
-Every architectural choice assumes: AI agents as collaborators, distributed teams as the norm, event-driven systems, sub-second sync globally, and 10x more software per organization. We do not optimize for legacy patterns we expect to be obsolete in 36 months.
+No black-box execution behavior.
 
----
+### 5. Developers Come First
 
-## Tier 2: Strong defaults
+Developer trust drives adoption. The product must respect developer time, tooling habits, and automation expectations.
 
-These are the principles we follow unless we have a deliberate, documented reason to deviate.
+Implications:
 
-### 9. Keyboard-first.
+- Keyboard-first workflows.
+- Strong GitHub and GitLab integration.
+- API, CLI, SDK, and webhook parity for meaningful capabilities.
+- Clean import and export paths.
+- Low-friction issue creation and updates from developer workflows.
+- No metrics that punish developers for healthy engineering behavior.
 
-Every meaningful action has a keyboard shortcut. The command palette is canonical. Mouse-only flows are accepted only where the interaction is fundamentally spatial.
+### 6. Realtime Is A Primitive
 
-### 10. Minimal cognitive load.
+Collaboration state should be live where it matters. Realtime is part of the substrate, not an upsell.
 
-Every screen earns its complexity. Every field, button, menu item, and badge must justify itself. When in doubt, remove it.
+Realtime behavior must be:
 
-### 11. Convention over configuration.
+- Fast.
+- Reliable under reconnect.
+- Tenant-safe.
+- Observable.
+- Grounded in durable state for business-critical workflows.
 
-We choose conventions for naming, structure, layout, and workflow. Customization is earned by evidence of broad need, not requested by individual customers.
+### 7. Enterprise Readiness Is Built In
 
-### 12. Boring infrastructure, exciting product.
+Enterprise readiness should not be postponed until it becomes painful. Tenant isolation, RBAC, audit logs, SSO readiness, data governance, and operational observability must shape the foundation.
 
-We use mature, proven infrastructure for the substrate (Postgres, Kafka, Redis, etc., as appropriate). We innovate where users feel it. We do not innovate where they don't.
+However, enterprise readiness must not become enterprise heaviness. Daily users should feel speed and clarity, not administrative drag.
 
-### 13. Event-driven by default.
+### 8. Agents Are First-Class Collaborators
 
-Every state change emits an event. Every event is queryable, replayable, and consumable by integrations and agents. The event log is the source of truth.
+AI agents need explicit representation.
 
-### 14. Observability is a product feature.
+Every agent should have:
 
-Customers can introspect their own usage, performance, and AI agent behavior. Observability is not internal-only.
+- Identity.
+- Owner.
+- Permission scope.
+- Purpose.
+- Audit trail.
+- Lifecycle state.
+- Human approval boundaries.
 
-### 15. Build for the median user, not the loudest one.
+Agents are not anonymous background jobs. They are governed collaborators.
 
-The vocal customer asking for an obscure feature is rarely representative. We instrument, we measure, we listen broadly. We do not roadmap by the squeakiest wheel.
+### 9. Focus Is A Feature
 
-### 16. Defaults are political.
+Qeetro should ship less than broad competitors and win because every shipped surface is sharper. Feature bloat is not a sign of maturity. It is often a sign of weak strategy.
 
-What we ship as the default shapes how customers think about the work. Defaults are a strategic choice, not a UX detail.
+## Tier 2: Product Defaults
 
-### 17. Performance budgets are non-negotiable.
+### Keyboard-First Productivity
 
-Every surface has a performance budget. Regressions block merge. New features either fit the budget or include the optimization work that frees the budget.
+The command palette, shortcuts, quick create, quick assign, quick move, and fast navigation are core product surfaces.
 
-### 18. Latency is a UX problem, not just an engineering one.
+### Workflows Over Configuration
 
-Optimistic UI, predictive prefetching, and intelligent caching are design responsibilities, not just engineering responsibilities.
+Users should experience coherent workflows: plan sprint, triage bug, summarize progress, resolve blocker, update roadmap. They should not have to assemble these from primitives.
 
-### 19. Onboarding is the most important feature.
+### Clarity Over Density
 
-A user who does not reach first value in the first session will not return. Onboarding receives founder-level attention indefinitely.
+Information density is valuable for expert users, but density without hierarchy becomes noise. Screens should optimize scanning, comparison, and repeated action.
 
-### 20. Documentation is part of the product.
+### Progressive Disclosure
 
-Docs ship with the feature. A feature without complete documentation is incomplete and does not count as shipped.
+Simple workflows should stay simple. Advanced controls should exist only where needed and should not pollute the common path.
 
----
+### Evidence-Based Roadmap
 
-## Tier 3: AI-specific principles
+Do not roadmap by loudest customer. Use product data, churn data, sales evidence, customer interviews, strategic fit, and moat contribution.
 
-### 21. AI is a peer, not a chatbot.
+### Documentation Is Product Surface
 
-We do not bolt a chatbot onto the corner of the screen. AI is integrated into every meaningful surface where it can reduce work. The chat interface, where it exists, is one entry point of many.
+Docs, API references, migration guides, agent behavior explanations, and runbooks are part of product quality.
 
-### 22. Agents have identity.
+## AI Principles
 
-Every AI agent operating in Qeetro has a distinct identity, owner, scoped permissions, and audit trail. Agents are not anonymous automations.
+### AI Is Embedded, Not Bolted On
 
-### 23. Agents act with consent.
+AI should appear in issue creation, sprint planning, search, summaries, triage, docs, routing, analytics, and agent workflows where it reduces work. Chat can exist, but chat is not the strategy.
 
-Agents act autonomously only within explicitly granted scopes. High-impact actions require human approval by default. The customer controls the autonomy frontier.
+### Hallucinations Are Defects
 
-### 24. Hallucinations are bugs.
+Incorrect AI output is not waved away as model behavior. It is measured, reduced, and treated as product risk.
 
-When AI generates incorrect output, we treat it as a defect, not a "limitation of the model." We invest in retrieval, grounding, evaluation, and constrained generation to reduce the rate. We measure it. We publish it internally.
+### Human Accountability Remains
 
-### 25. AI capabilities are evaluated, not just shipped.
+AI can recommend, draft, summarize, classify, route, and act within granted scopes. Humans or agent owners remain accountable for meaningful outcomes.
 
-Every AI feature has a measurable evaluation suite. Regressions in AI quality are treated like regressions in any other system. We do not ship "AI is non-deterministic" as an excuse.
+### Tenant Boundaries Are Absolute
 
-### 26. AI augments human decision-making, never replaces accountability.
+AI retrieval, embeddings, prompts, logs, and generated artifacts must respect tenant and permission boundaries.
 
-The human is always accountable. AI may recommend, draft, route, or summarize. The decision authority remains with the human (or with the agent's owner, who is accountable for the agent).
+### AI Quality Must Be Evaluated
 
-### 27. Context is the moat.
+Every meaningful AI capability needs evaluation fixtures, regression checks, observability, and fallback behavior.
 
-The quality of AI in Qeetro is a function of the quality and breadth of context the substrate captures. We invest in capturing context (events, integrations, conversations, artifacts) because that investment compounds into AI quality that competitors cannot match without similar substrate.
+## Anti-Principles
 
-### 28. Privacy and data isolation are absolute.
+Qeetro will never be:
 
-Customer data is never used to train shared models without explicit, granular consent. Per-tenant model fine-tuning is opt-in, transparent, and revocable.
+- A generic work OS for every department.
+- A workflow configuration playground.
+- A status theater machine.
+- A surveillance product for ranking individual developers.
+- A feature factory chasing competitor checklists.
+- A product that requires consultants to become useful.
+- A chatbot wrapper around a ticket database.
+- A slow enterprise suite with modern branding.
+- A walled garden that traps customer data.
 
----
+## Decision Rubric
 
-## Tier 4: What Qeetro will never be
+Before approving meaningful work, ask:
 
-These are the explicit anti-principles. Saying no to these is the source of our quality.
+- Does this improve execution speed?
+- Does this reduce coordination overhead?
+- Does this reduce cognitive load?
+- Does this strengthen developer trust?
+- Does this improve AI-native differentiation?
+- Does this preserve tenant safety and governance?
+- Does this compound a long-term moat?
+- Does this fit the current phase of the company?
 
-### Qeetro will never be:
+If the answer is mostly no, the work should not proceed.
 
-- **A configuration-driven workflow engine** with custom statuses, custom issue types, custom fields as the primary mode of customization.
-- **A generic "work OS"** trying to serve marketing, HR, legal, finance, and engineering with one product.
-- **A surveillance tool** that measures developer keystrokes, lines of code, or "productivity" via vanity metrics.
-- **An implementation-services product** where success requires a six-month deployment by certified consultants.
-- **A walled garden** that locks customer data behind proprietary formats or restrictive APIs.
-- **A "platform of platforms"** with so many primitives that customers must build their own product on top to make it useful.
-- **An AI-feature-of-the-week shop** that ships gimmicks to chase headlines.
-- **A meeting-replication tool** that forces sync rituals into the product (we eliminate the meetings, not embed them).
-- **A status-theater product** that helps managers look productive without enabling teams to be productive.
-- **A maximalist enterprise vendor** that sells to the CIO over the heads of the engineers who will use it.
+## Phase Discipline
 
----
+The same principle can imply different decisions at different phases.
 
-## How principles are amended
+At seed stage, speed means narrow scope and fast time to first value.
 
-Tier 1 principles can be amended only by founder approval, with a written rationale and a 30-day reflection period. Tier 2 principles can be amended by the head of product. Tier 3 principles by the head of AI. Tier 4 anti-principles can never be relaxed; only added to.
+At mid-market stage, speed means scaling workflows without adding admin burden.
 
-The bias is toward fewer principles, more strictly held. If a principle is not load-bearing in monthly decisions, it should be removed.
+At enterprise stage, speed means governance that does not slow daily execution.
 
-## Using principles in practice
-
-In every roadmap review, design review, and architectural review, the question is asked:
-
-> _"Which principle is this decision strengthening? Which principle, if any, is it in tension with?"_
-
-If the answer is "none" — the work is suspect.
-If the answer involves trading off a Tier 1 principle — the work is rejected.
-If the answer is unclear — the proposer needs to think harder before bringing it back.
-
-Principles are how a small organization makes consistent decisions across thousands of micro-choices without re-litigating strategy each time. Treat them as infrastructure.
+Agents and collaborators must always ask which phase they are designing for before recommending complexity.

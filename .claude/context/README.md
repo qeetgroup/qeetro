@@ -4,8 +4,11 @@
 
 Context files contain durable project knowledge. Claude agents and collaborators should load these before making product, architecture, implementation, or delivery decisions.
 
+These files are downstream of [strategy/](../../strategy/README.md). When in doubt about _why_ (category, positioning, principles, AI philosophy), read `strategy/`. Use `.claude/context/` for _how_ we execute.
+
 ## Load Order
 
+0. [strategy/](../../strategy/README.md), at minimum `00-manifesto.md`, `03-positioning.md`, `05-product-principles.md`, `09-ai-philosophy.md`
 1. `product-vision.md`
 2. `engineering-principles.md`
 3. `tech-stack.md`

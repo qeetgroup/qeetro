@@ -2,13 +2,15 @@
 
 ## Purpose
 
-This file is the product source of truth for Qeetro. Use it before writing PRDs, issues, workflows, architecture proposals, UI plans, or roadmap recommendations.
+This file is the **operational** product reference for Qeetro. The **strategic** source-of-truth, category, positioning, principles, and moats, lives in [strategy/](../../strategy/README.md). When this file and `strategy/` disagree, `strategy/` wins and this file should be updated.
 
 ## Product Summary
 
-Qeetro is an AI-native project management and execution platform for modern software teams.
+Qeetro is an **AI-Native Execution System** for software teams, a new category, not a Jira/Linear alternative. It is designed on the assumption that AI is a peer collaborator, the substrate infers state instead of requiring humans to report it, and coordination cost is a tax the system should drive toward zero.
 
-It combines:
+See [Category Design](../../strategy/04-category-design.md) and [Positioning](../../strategy/03-positioning.md) for the full framing.
+
+Operationally, the platform combines:
 
 - Issue tracking
 - Project and roadmap planning
@@ -60,13 +62,16 @@ and more time:
 
 ## Product Principles
 
-- Fast before fancy
-- Clear before configurable
-- Workflow-first before feature-first
-- AI-assisted before AI-autonomous
-- Realtime by default where collaboration matters
-- Developer-friendly without excluding non-technical teammates
-- Enterprise-ready without becoming enterprise-heavy
+The canonical list, including the "What Qeetro Will Never Be" anti-principles, lives in [strategy/05-product-principles.md](../../strategy/05-product-principles.md). Operating shorthand:
+
+- Speed is correctness (sub-100ms core, sub-5min time-to-first-value)
+- Configuration is failure: opinionated defaults over endless settings
+- AI must reduce work, not produce it (no demo-driven AI)
+- The system explains itself: no black-box automations
+- Developers come first: API, CLI, SDK, webhooks at parity with the UI
+- Realtime is a primitive, not a feature
+- Enterprise readiness is built in from day one
+- AI agents are first-class collaborators with identity, permissions, audit, and accountability
 
 ## Core Pillars
 

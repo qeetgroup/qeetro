@@ -2,7 +2,7 @@
 
 **The AI-native execution system for software teams who are done configuring tools and want to ship.**
 
-Qeetro is building a new category — **AI-Native Execution Systems** — designed from the substrate up to make execution faster than the meetings about execution.
+Qeetro is building a new category: **AI-Native Execution Systems**. It is designed from the substrate up to make execution faster than the meetings about execution.
 
 We are not a "Jira alternative." We are not "Linear with AI." We are the first execution system designed on the assumption that AI is a peer collaborator, the substrate should infer state instead of requiring humans to report it, and coordination cost is a tax that the system's job is to drive toward zero.
 
@@ -25,6 +25,7 @@ The strategic source-of-truth for Qeetro lives in [strategy/](strategy/README.md
 | [Competitive Teardown](strategy/08-competitive-teardown.md)     | Deep analysis of every meaningful competitor.              |
 | [AI Philosophy](strategy/09-ai-philosophy.md)                   | How AI is built into the substrate, not bolted on.         |
 | [Roadmap Strategy](strategy/10-roadmap-strategy.md)             | What we build, in what order, and why.                     |
+| [Market Research Update](strategy/11-market-research-2026.md)   | Public competitor signals and strategic implications.      |
 
 ---
 
