@@ -1,0 +1,26 @@
+{
+  "name": "@qeetro/source",
+  "version": "0.0.0",
+  "description": "**The AI-native execution system for software teams who are done configuring tools and want to ship.**",
+  "keywords": [
+    "qeetro"
+  ],
+  "homepage": "https://github.com/qeetgroup/qeetro#readme",
+  "bugs": {
+    "url": "https://github.com/qeetgroup/qeetro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qeetgroup/qeetro.git"
+  },
+  "license": "MIT",
+  "author": "Qeet Group",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
