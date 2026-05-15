@@ -12,20 +12,21 @@ We are not a "Jira alternative." We are not "Linear with AI." We are the first e
 
 The strategic source-of-truth for Qeetro lives in [strategy/](strategy/README.md).
 
-| Document                                                        | What it answers                                            |
-| --------------------------------------------------------------- | ---------------------------------------------------------- |
-| [Manifesto](strategy/00-manifesto.md)                           | Why Qeetro exists. The non-negotiables.                    |
-| [Vision](strategy/01-vision.md)                                 | The 10-year future we are building toward.                 |
-| [Mission](strategy/02-mission.md)                               | What we do, today, to get there.                           |
-| [Positioning](strategy/03-positioning.md)                       | Who Qeetro is for, who it is not for, and the wedge.       |
-| [Category Design](strategy/04-category-design.md)               | The category we are creating: AI-Native Execution Systems. |
-| [Product Principles](strategy/05-product-principles.md)         | The operating laws that govern every product decision.     |
-| [ICP](strategy/06-icp.md)                                       | Ideal customer profiles, pains, triggers, adoption paths.  |
-| [Differentiation & Moats](strategy/07-differentiation-moats.md) | What makes Qeetro structurally hard to copy.               |
-| [Competitive Teardown](strategy/08-competitive-teardown.md)     | Deep analysis of every meaningful competitor.              |
-| [AI Philosophy](strategy/09-ai-philosophy.md)                   | How AI is built into the substrate, not bolted on.         |
-| [Roadmap Strategy](strategy/10-roadmap-strategy.md)             | What we build, in what order, and why.                     |
-| [Market Research Update](strategy/11-market-research-2026.md)   | Public competitor signals and strategic implications.      |
+| Document                                                        | What it answers                                             |
+| --------------------------------------------------------------- | ----------------------------------------------------------- |
+| [Manifesto](strategy/00-manifesto.md)                           | Why Qeetro exists. The non-negotiables.                     |
+| [Vision](strategy/01-vision.md)                                 | The 10-year future we are building toward.                  |
+| [Mission](strategy/02-mission.md)                               | What we do, today, to get there.                            |
+| [Positioning](strategy/03-positioning.md)                       | Who Qeetro is for, who it is not for, and the wedge.        |
+| [Category Design](strategy/04-category-design.md)               | The category we are creating: AI-Native Execution Systems.  |
+| [Product Principles](strategy/05-product-principles.md)         | The operating laws that govern every product decision.      |
+| [ICP](strategy/06-icp.md)                                       | Ideal customer profiles, pains, triggers, adoption paths.   |
+| [Differentiation & Moats](strategy/07-differentiation-moats.md) | What makes Qeetro structurally hard to copy.                |
+| [Competitive Teardown](strategy/08-competitive-teardown.md)     | Deep analysis of every meaningful competitor.               |
+| [AI Philosophy](strategy/09-ai-philosophy.md)                   | How AI is built into the substrate, not bolted on.          |
+| [Roadmap Strategy](strategy/10-roadmap-strategy.md)             | What we build, in what order, and why.                      |
+| [Market Research Update](strategy/11-market-research-2026.md)   | Public competitor signals and strategic implications.       |
+| [Product Requirements](strategy/product-requirements/README.md) | Phase-based PRDs, acceptance criteria, and execution plans. |
 
 ---
 

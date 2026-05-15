@@ -154,6 +154,13 @@ Audit event is required for:
 - Organization member removed.
 - Security-sensitive setting changed.
 - Session revoked due to access change.
+- Team created or updated.
+- Project created, updated, archived, or restored.
+- Issue archived, restored, bulk updated, or moved by integration/import/AI actor.
+- Integration installed, reconnected, or removed.
+- Import started, completed, failed, or rolled back where supported.
+- AI setting changed.
+- AI action logged for generated summaries, suggestions, drafts, or accepted changes.
 
 Minimum audit fields:
 
@@ -204,7 +211,7 @@ Apply rate limits to:
 - Sensitive data must be excluded from logs.
 - Invite tokens, session tokens, passwords, and raw secrets must never be logged.
 - Permission failures must not confirm existence of private organizations or workspaces.
-- Member removal must revoke future access across API, UI, notifications, realtime-ready channels, and future AI retrieval.
+- Member removal must revoke future access across API, UI, notifications, realtime-ready channels, and AI retrieval.
 - Audit writes for sensitive actions should be reliable and monitored.
 
 ## Analytics Requirements
@@ -223,10 +230,16 @@ Apply rate limits to:
 ### Operational Metrics
 
 - API latency and errors for auth and membership endpoints.
+- API latency and errors for project, issue, comment, doc, search, GitHub, import, and AI endpoints.
 - Database latency for tenant-scoped permission checks.
 - Audit event write success rate.
 - Permission denial count by action category.
 - Invite job failure count.
+- Event consumer lag and dead-letter count.
+- Search indexing lag and reindex failure count.
+- GitHub webhook failure and retry count.
+- Import job progress, failure, retry, and duplicate-prevention count.
+- AI provider latency, failure, timeout, and fallback count.
 - Rate limit hit count.
 - Session revocation success and failure count.
 
@@ -263,6 +276,7 @@ Deferred:
 - Signup, login, invite creation, and invite acceptance are rate-limited.
 - Product analytics track activation and access lifecycle.
 - Operational metrics expose auth, invite, audit, and permission health.
+- Operational metrics expose project, issue, comment, doc, search, GitHub, import, notification, realtime, and AI health before those paths scale.
 - Foundation supports future AI actor attribution.
 
 ## Dependencies

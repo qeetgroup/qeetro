@@ -254,24 +254,34 @@ Qeetro should avoid:
 
 ## Strategic Phases
 
-### Phase 1 - Core Work Management
+### Phase 1 - MVP Core Execution
 
 - Workspace and organization model
+- Teams and membership
 - Projects
 - Issues
 - Workflow states
 - Backlog
 - Boards
 - Basic comments and notifications
+- Basic sprint or cycle planning
+- Lightweight docs tied to projects or issues
+- GitHub PR and commit links
+- Import path from CSV, GitHub Issues, or Linear
+- AI issue drafting, summarization, workspace search, source-backed answers, action logs, and basic controls
+- Audit and observability foundations
 
-### Phase 2 - Agile and Collaboration
+### Phase 2 - Multi-Team Coordination
 
-- Sprints
 - Roadmaps
-- Docs/wiki
-- Mentions
-- Realtime updates
+- Cross-team dependencies
+- Multi-team project views
+- Release planning basics
+- Improved sprint planning
+- Better docs and decision capture
 - Team activity streams
+- Slack integration
+- AI status synthesis, blockers, and risk detection
 
 ### Phase 3 - Automation and Integrations
 

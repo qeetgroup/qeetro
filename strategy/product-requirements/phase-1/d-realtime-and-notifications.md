@@ -31,6 +31,8 @@ Ensure workspace and membership changes propagate quickly to active users and th
 - Active access revocation handling for removed members.
 - Realtime channel scoping by organization and workspace.
 - Reconnect permission revalidation.
+- Realtime or refetch-on-event contracts for issue updates, board movement, comments, activity, import progress, GitHub link changes, and AI task progress.
+- Durable-state reconciliation after missed execution-domain events.
 - Invite email notification.
 - Event-backed notification records for invite acceptance, role change, and member removal.
 - Notification preference foundation.
@@ -44,7 +46,7 @@ Ensure workspace and membership changes propagate quickly to active users and th
 - Weekly digests.
 - Per-project notification controls.
 - Full activity feed UI.
-- Collaborative docs.
+- Advanced collaborative docs editing.
 - Presence indicators beyond readiness foundations.
 - Push notifications.
 
@@ -156,6 +158,8 @@ Admin creates invite.
 - Workspace list updates after access changes.
 - Member list updates after invite acceptance, role change, and removal.
 - Pending invite state updates after acceptance, revocation, and expiration.
+- Issue, comment, board, activity, import, GitHub, and AI task updates can be delivered as realtime patches or refetch signals.
+- Clients must reconcile execution-domain realtime updates against durable state.
 
 ### Notifications
 
@@ -165,6 +169,7 @@ Admin creates invite.
 - Member removal affects notification eligibility immediately.
 - Notification records include organization ID and workspace ID where applicable.
 - User notification preference foundation exists, even if advanced preferences are deferred.
+- Assignment, mention, comment, import completion, GitHub link, and AI task completion notifications are supported by the same tenant-scoped notification foundation when enabled by later Phase 1 domains.
 
 ### Events
 
@@ -185,6 +190,14 @@ Events required for this phase:
 - notification.created
 - notification.delivery_failed
 - realtime.subscription_revoked
+- issue.updated
+- issue.status_changed
+- comment.created
+- mention.created
+- doc.updated
+- github.pull_request_linked
+- import.progress_updated
+- ai.workflow_completed
 
 ## UX Expectations
 
@@ -225,6 +238,7 @@ Track:
 - Workspace list updates after workspace creation or access change.
 - Member list updates after invite acceptance, role change, or removal.
 - Pending invite state updates after invite acceptance, revocation, or expiration.
+- Issue updates, board movement, comments, activity, import progress, GitHub links, and AI workflow completion can trigger realtime patches or durable refetch signals.
 - Removed users cannot continue receiving realtime events for affected scopes.
 - Reconnect revalidates identity and permissions.
 - Invite email delivery is observable.

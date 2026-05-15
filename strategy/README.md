@@ -57,6 +57,7 @@ See [Market Research Update](11-market-research-2026.md) for source notes and [C
 | 09  | [AI Philosophy](09-ai-philosophy.md)                     | How AI is built into the substrate, not bolted onto the product.     |
 | 10  | [Roadmap Strategy](10-roadmap-strategy.md)               | What to build, when to build it, and what to delay.                  |
 | 11  | [Market Research Update](11-market-research-2026.md)     | Current public competitor signals and strategic implications.        |
+| PRD | [Product Requirements](product-requirements/README.md)   | Phase-based execution requirements, PRDs, and implementation plans.  |
 
 ## Source Of Truth Order
 
@@ -74,7 +75,7 @@ The repository is currently in a seed and planning state. Strategy documents des
 
 ## How To Use These Documents
 
-Before defining a feature, read [Product Principles](05-product-principles.md), [Positioning](03-positioning.md), and [Roadmap Strategy](10-roadmap-strategy.md).
+Before defining a feature, read [Product Principles](05-product-principles.md), [Positioning](03-positioning.md), [Roadmap Strategy](10-roadmap-strategy.md), and the relevant [Product Requirements](product-requirements/README.md).
 
 Before making an architecture or platform decision, read [AI Philosophy](09-ai-philosophy.md), [Differentiation and Moats](07-differentiation-moats.md), and the relevant `.claude/context/` files.
 

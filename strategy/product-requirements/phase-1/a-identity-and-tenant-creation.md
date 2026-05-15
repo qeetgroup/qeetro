@@ -168,7 +168,7 @@ Permission guardrails:
 - Session tokens must never be logged.
 - Organization ID must scope all organization-owned records.
 - Workspace ID must scope workspace-owned records.
-- Cache keys, logs, analytics, events, jobs, and future AI retrieval must include tenant-safe scoping.
+- Cache keys, logs, analytics, events, jobs, and AI retrieval must include tenant-safe scoping.
 
 ## Analytics Requirements
 
