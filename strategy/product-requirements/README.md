@@ -8,6 +8,10 @@ This folder contains phase-based product requirements for Qeetro. Requirements h
 
 The first requirement set covers Phase 1 MVP Core Execution. It starts with the identity, tenant, actor, membership, permission, audit, notification, realtime, and AI-governance substrate, then extends into the customer-visible execution loop: teams, projects, issues, comments, docs, search, sprint/cycle planning, GitHub links, imports, and AI-assisted execution.
 
+## Related Architecture
+
+- [Backend Architecture](../backend-architecture/README.md)
+
 The Phase 1 promise: a technical founder, engineering manager, product lead, or software engineer can create a workspace, invite teammates, create a project, capture issues, collaborate with comments/docs, connect work to GitHub, plan a basic sprint or cycle, search permitted context, and use source-backed AI assistance without entering an admin-heavy configuration system.
 
 ## Source Context

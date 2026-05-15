@@ -4,6 +4,11 @@ This directory is the strategic source of truth for Qeetro.
 
 The `.claude/` folder is the operational layer for agents, prompts, workflows, and reusable execution context. This `strategy/` directory defines the deeper company logic: why Qeetro exists, what category it is creating, who it serves, what it refuses to become, and how the product should compound over time.
 
+## Architecture Directories
+
+- [system-architecture/](system-architecture/): System architecture, domains, data, events, APIs, security, and roadmap
+- [backend-architecture/](backend-architecture/): Implementation-ready backend architecture, module topology, database, API, event, and worker design
+
 When strategy and operational guidance disagree, this directory wins. When repository implementation proves a different reality, update the relevant strategy or context document instead of letting stale guidance drift.
 
 ## Strategic Thesis
